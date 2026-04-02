@@ -1,8 +1,8 @@
 # TTRPG Showcase
 
-Interactive presentation of 27 tabletop RPG systems. Explore, compare, and vote with your group on what to play next.
+> Browse 27 tabletop RPG systems, compare mechanics, vote with your group, pick what to play next.
 
-**[Live Demo](https://kejid.github.io/ttrpg-showcase/)**
+**[Live Demo](https://kejid.github.io/ttrpg-showcase/)** · Bilingual (EN/RU) · Zero dependencies · Forkable
 
 ![TTRPG Showcase](https://raw.githubusercontent.com/kejid/ttrpg-showcase/master/screenshot.png)
 
