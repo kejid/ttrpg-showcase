@@ -14,6 +14,10 @@
 <!-- Setup Overlay -->
 <div id="setup-overlay" class="setup-overlay">
     <div class="setup-card">
+        <div class="setup-lang-toggle">
+            <button onclick="setLang('en')" class="setup-lang-btn" id="setup-lang-en">EN</button>
+            <button onclick="setLang('ru')" class="setup-lang-btn" id="setup-lang-ru">RU</button>
+        </div>
         <h1 data-i18n="setup_title">TTRPG Showcase</h1>
         <p data-i18n="setup_subtitle">Настрой группу перед началом. Каждый игрок сможет голосовать за системы, которые хочет попробовать.</p>
         <div class="setup-field">
@@ -34,6 +38,17 @@
         </div>
         <button class="setup-start-btn" id="setup-start" onclick="startApp()" data-i18n="setup_start">Начать</button>
         <button class="setup-start-btn secondary" onclick="skipSetup()" data-i18n="setup_skip">Просто посмотреть без голосования</button>
+        <div class="setup-faq">
+            <details>
+                <summary data-i18n="setup_faq_title">Как это работает?</summary>
+                <ul>
+                    <li data-i18n="setup_faq_1">Пролистайте карточки систем и узнайте о каждой</li>
+                    <li data-i18n="setup_faq_2">Каждый игрок голосует за понравившиеся системы</li>
+                    <li data-i18n="setup_faq_3">На странице результатов видно что набрало больше голосов</li>
+                    <li data-i18n="setup_faq_4">Или просто просмотрите каталог без голосования</li>
+                </ul>
+            </details>
+        </div>
     </div>
 </div>
 
@@ -222,6 +237,7 @@
 
 <script src="i18n.js"></script>
 <script src="data/systems.js"></script>
+<script src="data/systems-en.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -7,6 +7,11 @@ const LANG = {
     setup_names_label: 'Имена',
     setup_start: 'Начать',
     setup_skip: 'Просто посмотреть без голосования',
+    setup_faq_title: 'Как это работает?',
+    setup_faq_1: 'Пролистайте карточки систем и узнайте о каждой',
+    setup_faq_2: 'Каждый игрок голосует за понравившиеся системы',
+    setup_faq_3: 'На странице результатов видно что набрало больше голосов',
+    setup_faq_4: 'Или просто просмотрите каталог без голосования',
     nav_title: 'TTRPG SHOWCASE',
     nav_subtitle: 'Голосуй за системы, в которые хочешь сыграть',
     nav_group_osr: 'The Odd & OSR',
@@ -96,6 +101,11 @@ const LANG = {
     setup_names_label: 'Names',
     setup_start: 'Start',
     setup_skip: 'Just browse without voting',
+    setup_faq_title: 'How does this work?',
+    setup_faq_1: 'Browse system cards and learn about each one',
+    setup_faq_2: 'Each player votes for systems they want to try',
+    setup_faq_3: 'Results page shows which systems got the most votes',
+    setup_faq_4: 'Or just browse the catalog without voting',
     nav_title: 'TTRPG SHOWCASE',
     nav_subtitle: 'Vote for systems you want to play',
     nav_group_osr: 'The Odd & OSR',
@@ -193,6 +203,10 @@ function setLang(lang) {
 }
 
 function applyLang() {
+    // Highlight active lang button on setup screen
+    document.querySelectorAll('.setup-lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.id === `setup-lang-${currentLang}`);
+    });
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
@@ -285,8 +299,50 @@ function applyLang() {
         if (prev && prev.classList.contains('section-title')) prev.remove();
         el.remove();
     });
-    if (typeof renderGalleries === 'function') renderGalleries();
-    if (typeof renderResources === 'function') renderResources();
+    // Re-render system pages with localized content
+    if (typeof renderAllSystems === 'function' && typeof SYSTEMS_DATA !== 'undefined' && Object.keys(SYSTEMS_DATA).length > 0) {
+        // Save current active page
+        const activePage = document.querySelector('.system-page.active');
+        const activeId = activePage ? activePage.id : null;
 
-    lucide.createIcons();
+        renderAllSystems();
+        if (typeof renderGalleries === 'function') renderGalleries();
+        if (typeof renderResources === 'function') renderResources();
+
+        // Re-translate data-i18n elements created by renderAllSystems
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const val = t(key);
+            const hasChild = el.querySelector('*');
+            if (!hasChild) {
+                el.textContent = val;
+            } else {
+                for (let node of el.childNodes) {
+                    if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+                        node.textContent = ' ' + val;
+                        break;
+                    }
+                }
+            }
+        });
+
+        // Re-render vote buttons if players exist
+        if (typeof PLAYERS !== 'undefined' && PLAYERS && typeof renderVoteButtons === 'function') {
+            document.querySelectorAll('.vote-section').forEach(section => {
+                renderVoteButtons(section.dataset.system);
+            });
+        }
+
+        // Restore active page
+        if (activeId) {
+            const restored = document.getElementById(activeId);
+            if (restored) restored.classList.add('active');
+        }
+
+        // Re-apply system visibility
+        if (typeof applySystemVisibility === 'function') applySystemVisibility();
+    }
+
+    if (typeof refreshIcons === 'function') refreshIcons();
+    else lucide.createIcons();
 }

@@ -37,15 +37,30 @@ let RES_LABELS = { link: 'Сайт', sheet: 'Лист', quickstart: 'Quickstart'
 
 // ============ LOAD SYSTEMS DATA ============
 function loadSystems() {
-    SYSTEMS_DATA = typeof SYSTEMS_JSON !== 'undefined' ? SYSTEMS_JSON : {};
+    SYSTEMS_DATA = typeof SYSTEMS_JSON !== 'undefined' ? JSON.parse(JSON.stringify(SYSTEMS_JSON)) : {};
+    const enData = typeof SYSTEMS_EN_JSON !== 'undefined' ? SYSTEMS_EN_JSON : {};
 
     for (const [id, sys] of Object.entries(SYSTEMS_DATA)) {
         SYSTEM_NAMES[id] = sys.name;
+        if (enData[id]) {
+            sys._en = enData[id];
+        }
     }
     SYSTEM_IDS = Object.keys(SYSTEMS_DATA);
 
     renderAllSystems();
     renderNavItems();
+}
+
+// ============ LOCALIZATION HELPER ============
+function localField(sys, field) {
+    if (currentLang === 'en' && sys._en && sys._en[field]) return sys._en[field];
+    return sys[field] || '';
+}
+
+function localArray(sys, field) {
+    if (currentLang === 'en' && sys._en && sys._en[field]) return sys._en[field];
+    return sys[field] || [];
 }
 
 // ============ SHARED HELPERS ============
@@ -76,7 +91,8 @@ function renderSystemPage(id, sys) {
         return `<span class="playstyle-tag tag-${tag}"><i data-lucide="${cfg.icon}"></i> ${cfg.label}</span>`;
     }).join('');
 
-    const mechanicsHTML = (sys.mechanics || []).map(m => {
+    const mechanics = localArray(sys, 'mechanics');
+    const mechanicsHTML = mechanics.map(m => {
         return `<div class="card"><h4><i data-lucide="${m.icon}"></i> ${m.title}</h4><p>${m.text}</p></div>`;
     }).join('');
 
@@ -84,18 +100,19 @@ function renderSystemPage(id, sys) {
         `<div class="reddit-quote">${q.text}<span class="reddit-user">\u2014 ${q.author}</span></div>`
     ).join('');
 
-    const vignetteHTML = sys.vignette
+    const vignette = localField(sys, 'vignette');
+    const vignetteHTML = vignette
         ? `<div class="section-title" data-i18n="section_vignette">Как это выглядит за столом</div>
-    <div class="setting-block" style="border-left: 3px solid var(--accent); font-style: italic;">${sys.vignette}</div>`
+    <div class="setting-block" style="border-left: 3px solid var(--accent); font-style: italic;">${vignette}</div>`
         : '';
 
     return `<section id="${id}" class="system-page">
     ${buildHeroBanner(id, sys)}
-    <p class="tagline">${sys.tagline}</p>
+    <p class="tagline">${localField(sys, 'tagline')}</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label" data-i18n="qs_dice">Кубики</span><span class="qs-value">${sys.dice}</span></div>
         <div class="qs"><span class="qs-label" data-i18n="qs_players">Игроки</span><span class="qs-value">${sys.players}</span></div>
-        <div class="qs"><span class="qs-label" data-i18n="qs_prep">Преп</span><span class="qs-value">${sys.prep}</span></div>
+        <div class="qs"><span class="qs-label" data-i18n="qs_prep">Преп</span><span class="qs-value">${localField(sys, 'prep')}</span></div>
         <div class="qs"><span class="qs-label" data-i18n="qs_foundry">Foundry VTT</span><span class="qs-value">${foundry}</span></div>
         <div class="qs">
             <span class="qs-label" data-i18n="qs_complexity">Сложность</span>
@@ -103,9 +120,9 @@ function renderSystemPage(id, sys) {
         </div>
     </div>
     <div class="section-title" data-i18n="section_system">Что это за система</div>
-    <div class="setting-block">${sys.description}</div>
+    <div class="setting-block">${localField(sys, 'description')}</div>
     <div class="section-title" data-i18n="section_setting">Сеттинг</div>
-    <div class="setting-block">${sys.setting}</div>
+    <div class="setting-block">${localField(sys, 'setting')}</div>
     ${vignetteHTML}
     <div class="section-title" data-i18n="section_playstyle">Плейстайл</div>
     <div class="playstyle-tags">${tagsHTML}</div>
@@ -271,7 +288,7 @@ function renderResults() {
         const sysData = SYSTEMS_DATA[id];
         const page = document.getElementById(id);
         const heroImg = sysData ? sysData.heroImage : (page?.querySelector('.hero-banner img')?.src || '');
-        const tagline = sysData ? sysData.tagline : (page?.querySelector('.tagline')?.textContent || '');
+        const tagline = sysData ? localField(sysData, 'tagline') : (page?.querySelector('.tagline')?.textContent || '');
         const tags = sysData ? (sysData.playstyleTags || []).map(tag => {
             const cfg = TAG_CONFIG[tag];
             return cfg ? cfg.label : tag;
@@ -397,7 +414,7 @@ function renderGalleries() {
     document.querySelectorAll('.vote-section').forEach(section => {
         const systemId = section.dataset.system;
         const sysData = SYSTEMS_DATA[systemId];
-        const images = sysData ? sysData.gallery : null;
+        const images = sysData ? localArray(sysData, 'gallery') : null;
         if (!images || images.length === 0) return;
         if (section.parentElement.querySelector('.gallery')) return;
         const galleryHTML = `
@@ -477,7 +494,7 @@ function renderResources() {
     document.querySelectorAll('.vote-section').forEach(section => {
         const id = section.dataset.system;
         const sysData = SYSTEMS_DATA[id];
-        const res = sysData ? sysData.resources : null;
+        const res = sysData ? localArray(sysData, 'resources') : null;
         if (!res || res.length === 0) return;
         if (section.parentElement.querySelector('.resources-section')) return;
         const html = `
