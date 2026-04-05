@@ -340,7 +340,7 @@ function renderResults() {
 }
 
 // ============ NAVIGATION ============
-function showPage(id) {
+function showPage(id, pushHistory = true) {
     document.querySelectorAll('.system-page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
     const page = document.getElementById(id);
@@ -351,6 +351,9 @@ function showPage(id) {
     const navItem = document.querySelector(`.nav-item[data-page="${id}"]`);
     if (navItem) navItem.classList.add('active');
     if (id === 'results') renderResults();
+    if (pushHistory) {
+        history.pushState({ page: id }, '', '#' + id);
+    }
     // Auto-close sidebar on mobile after navigation
     if (window.innerWidth <= 768) {
         document.querySelector('.sidebar').classList.remove('open');
@@ -562,11 +565,17 @@ function _closeDialog(name) {
     }
 }
 
-window.addEventListener('popstate', () => {
-    if (!_dialogOpen) return;
-    const id = _dialogOpen === 'editor' ? 'editor-overlay' : 'sys-selector-overlay';
-    document.getElementById(id).classList.add('hidden');
-    _dialogOpen = null;
+window.addEventListener('popstate', (e) => {
+    // Close dialog if one is open
+    if (_dialogOpen) {
+        const id = _dialogOpen === 'editor' ? 'editor-overlay' : 'sys-selector-overlay';
+        document.getElementById(id).classList.add('hidden');
+        _dialogOpen = null;
+        return;
+    }
+    // Navigate to the page stored in history state
+    const pageId = (e.state && e.state.page) || 'results';
+    showPage(pageId, false);
 });
 
 function openEditor(editId) {
@@ -902,9 +911,17 @@ function initApp() {
     renderResults();
     applyLang();
     refreshIcons();
+    // Restore page from URL hash if present
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) {
+        showPage(hash, false);
+    }
 }
 
 // ============ BOOT ============
+// Set initial history state so popstate can return to the start page
+history.replaceState({ page: 'results' }, '', window.location.hash || '#results');
+
 loadSystems();
 renderGalleries();
 renderResources();
