@@ -66,14 +66,9 @@ function loadSystems() {
 }
 
 // ============ LOCALIZATION HELPER ============
-function localField(sys, field) {
+function localField(sys, field, fallback = '') {
     if (currentLang === 'en' && sys._en && sys._en[field]) return sys._en[field];
-    return sys[field] || '';
-}
-
-function localArray(sys, field) {
-    if (currentLang === 'en' && sys._en && sys._en[field]) return sys._en[field];
-    return sys[field] || [];
+    return sys[field] || fallback;
 }
 
 // ============ SHARED HELPERS ============
@@ -104,7 +99,7 @@ function renderSystemPage(id, sys) {
         return `<span class="playstyle-tag tag-${tag}"><i data-lucide="${cfg.icon}"></i> ${cfg.label}</span>`;
     }).join('');
 
-    const mechanics = localArray(sys, 'mechanics');
+    const mechanics = localField(sys, 'mechanics', []);
     const mechanicsHTML = mechanics.map(m => {
         return `<div class="card"><h4><i data-lucide="${m.icon}"></i> ${m.title}</h4><p>${m.text}</p></div>`;
     }).join('');
@@ -430,7 +425,7 @@ function renderGalleries() {
     document.querySelectorAll('.vote-section').forEach(section => {
         const systemId = section.dataset.system;
         const sysData = SYSTEMS_DATA[systemId];
-        const images = sysData ? localArray(sysData, 'gallery') : null;
+        const images = sysData ? localField(sysData, 'gallery', []) : null;
         if (!images || images.length === 0) return;
         if (section.parentElement.querySelector('.gallery')) return;
         const galleryHTML = `
@@ -510,7 +505,7 @@ function renderResources() {
     document.querySelectorAll('.vote-section').forEach(section => {
         const id = section.dataset.system;
         const sysData = SYSTEMS_DATA[id];
-        const res = sysData ? localArray(sysData, 'resources') : null;
+        const res = sysData ? localField(sysData, 'resources', []) : null;
         if (!res || res.length === 0) return;
         if (section.parentElement.querySelector('.resources-section')) return;
         const html = `
@@ -800,9 +795,10 @@ let hiddenSystems = JSON.parse(localStorage.getItem('ttrpg-hidden-systems') || '
 
 // Nav group definitions for the selector UI
 const NAV_GROUPS = [
-    { key: 'nav_group_osr', ids: ['into-the-odd','electric-bastionland','mythic-bastionland','cairn','mork-borg','shadowdark'] },
-    { key: 'nav_group_fl', ids: ['alien','blade-runner','vaesen','forbidden-lands','twilight','tales-loop','dragonbane','coriolis'] },
-    { key: 'nav_group_narrative', ids: ['heart','triangle','mothership','blades','wildsea','delta-green','uvg','microscope','one-ring','outgunned','l5r','draw-steel','nimble'] },
+    { key: 'nav_group_osr', ids: SYSTEM_GROUPS.osr },
+    { key: 'nav_group_fl', ids: SYSTEM_GROUPS.fl },
+    { key: 'nav_group_narrative', ids: SYSTEM_GROUPS.narrative },
+    { key: 'nav_group_tactical', ids: SYSTEM_GROUPS.tactical },
 ];
 
 function openSystemSelector() {
@@ -859,6 +855,14 @@ function openSystemSelector() {
 }
 
 function closeSystemSelector() { _closeDialog('selector'); }
+
+// Close dialogs on backdrop click
+document.getElementById('editor-overlay').addEventListener('click', e => {
+    if (e.target === e.currentTarget) closeEditor();
+});
+document.getElementById('sys-selector-overlay').addEventListener('click', e => {
+    if (e.target === e.currentTarget) closeSystemSelector();
+});
 
 function sysSelectAll() {
     document.querySelectorAll('#sys-selector-list input[type="checkbox"]').forEach(cb => {

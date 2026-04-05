@@ -204,50 +204,36 @@ function setLang(lang) {
     applyLang();
 }
 
+function translateI18nElements(root) {
+    (root || document).querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = t(key);
+        if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) return;
+        if (el.tagName === 'OPTION') { el.textContent = val; return; }
+        if (!el.querySelector('*')) { el.textContent = val; return; }
+        // Preserve child elements (like <i> icons) — only update text nodes
+        for (let node of el.childNodes) {
+            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+                node.textContent = ' ' + val;
+                return;
+            }
+        }
+        const nodes = Array.from(el.childNodes);
+        for (let i = nodes.length - 1; i >= 0; i--) {
+            if (nodes[i].nodeType === Node.TEXT_NODE) {
+                nodes[i].textContent = ' ' + val;
+                return;
+            }
+        }
+    });
+}
+
 function applyLang() {
     // Highlight active lang buttons
     document.querySelectorAll('.setup-lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.id.endsWith(`-${currentLang}`));
     });
-    // Update all elements with data-i18n attribute
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        const val = t(key);
-        if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
-            // Don't change text content for inputs, they use placeholder
-        } else if (el.tagName === 'OPTION') {
-            el.textContent = val;
-        } else {
-            // Preserve child elements (like <i> icons) — only update text nodes
-            // If element has only text, set textContent directly
-            const hasChildElements = el.querySelector('*');
-            if (!hasChildElements) {
-                el.textContent = val;
-            } else {
-                // Find the text node and update it, preserving child elements
-                // Strategy: update the last text node or append one
-                let found = false;
-                for (let node of el.childNodes) {
-                    if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
-                        node.textContent = ' ' + val;
-                        found = true;
-                        break;
-                    }
-                }
-                if (!found) {
-                    // Look for text after icon elements
-                    const nodes = Array.from(el.childNodes);
-                    for (let i = nodes.length - 1; i >= 0; i--) {
-                        if (nodes[i].nodeType === Node.TEXT_NODE) {
-                            nodes[i].textContent = ' ' + val;
-                            found = true;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-    });
+    translateI18nElements();
 
     // Update setup player count dropdown options
     const setupCount = document.getElementById('setup-count');
@@ -311,22 +297,7 @@ function applyLang() {
         if (typeof renderGalleries === 'function') renderGalleries();
         if (typeof renderResources === 'function') renderResources();
 
-        // Re-translate data-i18n elements created by renderAllSystems
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            const val = t(key);
-            const hasChild = el.querySelector('*');
-            if (!hasChild) {
-                el.textContent = val;
-            } else {
-                for (let node of el.childNodes) {
-                    if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
-                        node.textContent = ' ' + val;
-                        break;
-                    }
-                }
-            }
-        });
+        translateI18nElements();
 
         // Re-render vote buttons if players exist
         if (typeof PLAYERS !== 'undefined' && PLAYERS && typeof renderVoteButtons === 'function') {
