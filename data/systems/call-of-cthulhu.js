@@ -2,7 +2,8 @@ registerSystem("call-of-cthulhu", {
   "groups": {
     "default": { "key": "narrative", "order": 14 },
     "family": { "key": "standalone", "order": 13 },
-    "genre": { "key": "horror", "order": 2 }
+    "genre": { "key": "horror", "order": 2 },
+    "solo": { "key": "solo-compatible", "order": 5 }
   },
   "name": "Call of Cthulhu",
   "publisher": "Chaosium Inc.",

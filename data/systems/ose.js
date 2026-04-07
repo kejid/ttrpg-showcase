@@ -10,7 +10,7 @@ registerSystem("ose", {
   "players": "2–6",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://cf.geekdo-images.com/PFOGOlLYYMZGCLjKi-sHNQ__imagepage/img/pA1bV0g_HCIaJlM3BcxYZ9KbXb4=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5607787.jpg",
+  "heroImage": "https://necroticgnome.com/cdn/shop/files/AFM_Cover_-_C_2022_David_Hoskins_13c53e3d-e120-43b0-8085-87d125f9aa7b.jpg?v=1669315843&width=3200",
   "playstyleTags": [
     "explore",
     "survival",
@@ -19,7 +19,17 @@ registerSystem("ose", {
   ],
   "gallery": [
     {
-      "src": "https://cf.geekdo-images.com/PFOGOlLYYMZGCLjKi-sHNQ__imagepage/img/pA1bV0g_HCIaJlM3BcxYZ9KbXb4=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5607787.jpg"
+      "src": "https://necroticgnome.com/cdn/shop/files/AFM_Cover_-_C_2022_David_Hoskins_13c53e3d-e120-43b0-8085-87d125f9aa7b.jpg?v=1669315843&width=3200"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I ran this for a 5e group as a 'one-shot' in February. We're now 14 sessions into a Dolmenwood campaign. The reaction roll system alone changed how I GM forever.",
+      "author": "u/moldvay_revival, r/osr"
+    },
+    {
+      "text": "The layout is the product. I can find any rule mid-session in seconds. It sounds like a small thing until you've wasted 10 minutes hunting through a 400-page hardcover mid-fight.",
+      "author": "u/BX_forever, r/rpg"
     }
   ],
   "resources": [

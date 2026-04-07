@@ -12,11 +12,13 @@ const TAG_ICONS = {
     explore: 'compass', combat: 'swords', narrative: 'book-open',
     horror: 'ghost', social: 'users', mystery: 'search',
     survival: 'skull', worldbuild: 'globe', tactical: 'crosshair', sandbox: 'map', action: 'zap',
+    solo: 'user',
 };
 const TAG_I18N = {
     explore: 'tag_exploration', combat: 'tag_combat', narrative: 'tag_narrative',
     horror: 'tag_horror', social: 'tag_social', mystery: 'tag_mystery',
     survival: 'tag_survival', worldbuild: 'tag_worldbuilding', tactical: 'tag_tactical', sandbox: 'tag_sandbox',
+    solo: 'tag_solo',
 };
 function tagLabel(tag) {
     const key = TAG_I18N[tag] || 'tag_' + tag;
@@ -32,7 +34,7 @@ const TAG_CONFIG = new Proxy({}, {
 let _lucideTimer;
 function refreshIcons() {
     clearTimeout(_lucideTimer);
-    _lucideTimer = setTimeout(() => lucide.createIcons(), 50);
+    _lucideTimer = setTimeout(() => { if (typeof lucide !== 'undefined') lucide.createIcons(); }, 50);
 }
 
 // ============ MINI MARKDOWN ============
@@ -141,7 +143,7 @@ function buildComplexityBar(level) {
 function buildHeroBanner(id, sys) {
     const style = sys.heroStyle ? ` style="${sys.heroStyle}"` : '';
     const imgStyle = sys.heroImageStyle ? ` style="${sys.heroImageStyle}"` : '';
-    const img = sys.heroImage ? `<img src="${heroFull(sys.heroImage)}" alt=""${imgStyle} loading="lazy" decoding="async" onerror="this.style.display='none'">` : '';
+    const img = sys.heroImage ? `<img src="${heroFull(sys.heroImage)}" alt=""${imgStyle} loading="lazy" decoding="async" onerror="this.style.opacity='0'">` : '';
     return `<div class="hero-banner"${style}>${img}<div class="hero-overlay"><div class="meta">${sys.publisher || ''}</div><h2>${sys.name}</h2></div></div>`;
 }
 
@@ -166,7 +168,7 @@ function renderSystemPage(id, sys) {
 
     const vignette = localField(sys, 'vignette');
     const vignetteHTML = vignette
-        ? `<div class="section-title" data-i18n="section_vignette">Как это выглядит за столом</div>
+        ? `<div class="section-title" data-i18n="section_vignette">${t('section_vignette')}</div>
     <div class="setting-block" style="border-left: 3px solid var(--accent); font-style: italic;">${vignette}</div>`
         : '';
 
@@ -174,28 +176,28 @@ function renderSystemPage(id, sys) {
     ${buildHeroBanner(id, sys)}
     <p class="tagline">${localField(sys, 'tagline')}</p>
     <div class="quick-stats">
-        <div class="qs"><span class="qs-label" data-i18n="qs_dice">Кубики</span><span class="qs-value">${sys.dice}</span></div>
-        <div class="qs"><span class="qs-label" data-i18n="qs_players">Игроки</span><span class="qs-value">${sys.players}</span></div>
-        <div class="qs"><span class="qs-label" data-i18n="qs_prep">Преп</span><span class="qs-value">${localField(sys, 'prep')}</span></div>
-        <div class="qs"><span class="qs-label" data-i18n="qs_foundry">Foundry VTT</span><span class="qs-value">${foundry}</span></div>
+        <div class="qs"><span class="qs-label" data-i18n="qs_dice">${t('qs_dice')}</span><span class="qs-value">${sys.dice}</span></div>
+        <div class="qs"><span class="qs-label" data-i18n="qs_players">${t('qs_players')}</span><span class="qs-value">${sys.players}</span></div>
+        <div class="qs"><span class="qs-label" data-i18n="qs_prep">${t('qs_prep')}</span><span class="qs-value">${localField(sys, 'prep')}</span></div>
+        <div class="qs"><span class="qs-label" data-i18n="qs_foundry">${t('qs_foundry')}</span><span class="qs-value">${foundry}</span></div>
         <div class="qs">
-            <span class="qs-label" data-i18n="qs_complexity">Сложность</span>
+            <span class="qs-label" data-i18n="qs_complexity">${t('qs_complexity')}</span>
             <div class="complexity-bar">${pips}</div>
         </div>
     </div>
-    <div class="section-title" data-i18n="section_system">Что это за система</div>
+    <div class="section-title" data-i18n="section_system">${t('section_system')}</div>
     <div class="setting-block">${miniMd(localField(sys, 'description'))}</div>
-    <div class="section-title" data-i18n="section_setting">Сеттинг</div>
+    <div class="section-title" data-i18n="section_setting">${t('section_setting')}</div>
     <div class="setting-block">${miniMd(localField(sys, 'setting'))}</div>
     ${vignetteHTML}
-    <div class="section-title" data-i18n="section_playstyle">Плейстайл</div>
+    <div class="section-title" data-i18n="section_playstyle">${t('section_playstyle')}</div>
     <div class="playstyle-tags">${tagsHTML}</div>
-    <div class="section-title" data-i18n="section_mechanics">Особенности механики</div>
+    <div class="section-title" data-i18n="section_mechanics">${t('section_mechanics')}</div>
     <div class="grid">${mechanicsHTML}</div>
-    <div class="section-title" data-i18n="section_reviews">Что говорят на Reddit</div>
+    <div class="section-title" data-i18n="section_reviews">${t('section_reviews')}</div>
     <div class="reddit-quotes">${quotesHTML}</div>
     <div class="vote-section" data-system="${id}">
-        <div class="vote-title" data-i18n="vote_title"><i data-lucide="thumbs-up"></i> Хочу сыграть!</div>
+        <div class="vote-title" data-i18n="vote_title"><i data-lucide="thumbs-up"></i> ${t('vote_title')}</div>
         <div class="vote-players"></div>
     </div>
 </section>`;
@@ -223,6 +225,9 @@ function ensureSystemRendered(id) {
         renderGalleryFor(id, section);
         renderResourcesFor(id, section);
     }
+    // Translate data-i18n elements within the new page
+    const page = document.getElementById(id);
+    if (page) translateI18nElements(page);
     refreshIcons();
 }
 
@@ -367,9 +372,10 @@ function renderVoteButtons(systemId) {
     if (!section || !PLAYERS) return;
     const container = section.querySelector('.vote-players');
     const systemVotes = votes[systemId] || [];
+    const sysName = SYSTEM_NAMES[systemId] || systemId;
     container.innerHTML = PLAYERS.map(p => {
         const voted = systemVotes.includes(p.id);
-        return `<button class="vote-btn ${voted ? 'voted' : ''}" onclick="toggleVote('${systemId}', '${p.id}')" style="${voted ? `border-color:${p.color};color:${p.color};background:${p.color}15` : ''}">
+        return `<button class="vote-btn ${voted ? 'voted' : ''}" onclick="toggleVote('${systemId}', '${p.id}')" aria-label="${p.name}: ${voted ? 'voted' : 'vote'} ${sysName}" style="${voted ? `border-color:${p.color};color:${p.color};background:${p.color}15` : ''}">
             <i data-lucide="thumbs-up"></i>
             <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${p.color};flex-shrink:0"></span>
             ${p.name}
@@ -990,6 +996,21 @@ function setSelectorGrouping(scheme) {
     refreshIcons();
 }
 
+function attachGroupToggle(title) {
+    title.addEventListener('click', function() {
+        var next = title.nextElementSibling;
+        if (!next || !next.classList.contains('sys-selector-list')) return;
+        var boxes = next.querySelectorAll('input[type="checkbox"]');
+        var groupCb = title.querySelector('.group-toggle-cb');
+        var allChecked = Array.from(boxes).every(function(cb) { return cb.checked; });
+        boxes.forEach(function(cb) {
+            cb.checked = !allChecked;
+            cb.closest('label').classList.toggle('disabled-sys', allChecked);
+        });
+        if (groupCb) groupCb.checked = !allChecked;
+    });
+}
+
 function rebuildSelectorList() {
     var list = document.getElementById('sys-selector-list');
     // Save current checked state
@@ -1004,7 +1025,8 @@ function rebuildSelectorList() {
     groups.forEach(function(group) {
         var title = document.createElement('div');
         title.className = 'sys-selector-group-title';
-        title.textContent = t(group.key);
+        title.innerHTML = '<input type="checkbox" checked class="group-toggle-cb"> ' + t(group.key);
+        attachGroupToggle(title);
         list.appendChild(title);
 
         var container = document.createElement('div');
@@ -1029,7 +1051,8 @@ function rebuildSelectorList() {
     if (CustomSystems.length > 0) {
         var title = document.createElement('div');
         title.className = 'sys-selector-group-title';
-        title.textContent = t('nav_group_custom');
+        title.innerHTML = '<input type="checkbox" checked class="group-toggle-cb"> ' + t('nav_group_custom');
+        attachGroupToggle(title);
         list.appendChild(title);
 
         var container = document.createElement('div');

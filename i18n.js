@@ -30,9 +30,13 @@ const LANG = {
     nav_group_horror: 'Хоррор и оккультизм',
     'nav_group_narrative-weird': 'Нарратив и Weird',
     nav_group_adventure: 'Приключения',
+    'nav_group_solo-adventure': 'Соло и кооп',
+    'nav_group_solo-journaling': 'Журналинг',
+    'nav_group_solo-compatible': 'Поддержка соло',
     grouping_default: 'Стандарт',
     grouping_family: 'По движку',
     grouping_genre: 'По жанру',
+    grouping_solo: 'Соло',
     btn_results: 'РЕЗУЛЬТАТЫ ГОЛОСОВАНИЯ',
     btn_catalog: 'КАТАЛОГ СИСТЕМ',
     btn_presentation: 'Режим презентации',
@@ -102,6 +106,7 @@ const LANG = {
     tag_sandbox: 'Песочница',
     tag_action: 'Экшн',
     tag_worldbuilding: 'Мироздание',
+    tag_solo: 'Соло',
     btn_manage_systems: 'Управление списком',
     sys_selector_title: 'Управление списком',
     sys_selector_desc: 'Отметьте системы, которые хотите показать. Скрытые системы не отображаются в навигации и результатах.',
@@ -140,9 +145,13 @@ const LANG = {
     nav_group_horror: 'Horror & Occult',
     'nav_group_narrative-weird': 'Narrative & Weird',
     nav_group_adventure: 'Adventure',
+    'nav_group_solo-adventure': 'Solo & Co-op',
+    'nav_group_solo-journaling': 'Journaling',
+    'nav_group_solo-compatible': 'Solo-Compatible',
     grouping_default: 'Default',
     grouping_family: 'By Engine',
     grouping_genre: 'By Genre',
+    grouping_solo: 'Solo',
     btn_results: 'VOTING RESULTS',
     btn_catalog: 'SYSTEM CATALOG',
     btn_presentation: 'Presentation mode',
@@ -212,6 +221,7 @@ const LANG = {
     tag_sandbox: 'Sandbox',
     tag_action: 'Action',
     tag_worldbuilding: 'Worldbuilding',
+    tag_solo: 'Solo',
     btn_manage_systems: 'Manage Systems',
     sys_selector_title: 'Manage Systems',
     sys_selector_desc: 'Check the systems you want to show. Hidden systems won\'t appear in navigation or results.',
@@ -231,7 +241,6 @@ function t(key) {
 function setLang(lang) {
     currentLang = lang;
     localStorage.setItem('ttrpg-lang', lang);
-    if (typeof loadSystems === 'function') loadSystems();
     applyLang();
 }
 

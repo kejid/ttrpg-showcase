@@ -10,7 +10,7 @@ registerSystem("death-in-space", {
   "players": "2–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Death-in-Space-1440x720.jpg",
+  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/D1_hori-1440x720.jpg",
   "playstyleTags": [
     "survival",
     "explore",
@@ -18,7 +18,7 @@ registerSystem("death-in-space", {
   ],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Death-in-Space-1440x720.jpg"
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/D1_hori-1440x720.jpg"
     }
   ],
   "resources": [
@@ -57,6 +57,7 @@ registerSystem("death-in-space", {
       "icon": "radio"
     }
   ],
+  "quotes": [{"text": "Your characters are scroungers on the edge. Then the Void starts pulling at the cracks in your mind, and suddenly survival is the least of your problems.", "author": "Gaming Trend review"}, {"text": "It feels like the universe has already left to beat traffic, and you're the ones left holding a wrench and a dwindling oxygen supply. Blue-collar apocalypse done right.", "author": "u/heat_death_salvager, r/osr"}],
   "ru": {
     "tagline": "«Добро пожаловать в коллапсирующую вселенную. Ваш экипаж — единственная семья.»",
     "description": "Death in Space — мрачная, рабочая sci-fi RPG о людях, которые пытаются выжить во вселенной, которая активно разваливается. Гнетущий промышленный ужас 80-х: Alien, Outland, Mad Max — перенесённые в пустоту между умирающими звёздами.",

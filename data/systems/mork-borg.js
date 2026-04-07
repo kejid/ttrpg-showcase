@@ -2,7 +2,8 @@ registerSystem("mork-borg", {
   "groups": {
     "default": { "key": "osr", "order": 5 },
     "family": { "key": "borg", "order": 1 },
-    "genre": { "key": "dark-fantasy", "order": 1 }
+    "genre": { "key": "dark-fantasy", "order": 1 },
+    "solo": { "key": "solo-compatible", "order": 3 }
   },
   "name": "MÖRK BORG",
   "publisher": "Ockult Örtmästare Games / Free League",

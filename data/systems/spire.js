@@ -21,6 +21,16 @@ registerSystem("spire", {
       "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/07/THE-WORLD-OF-HEART-scaled-e1595931454162.jpg"
     }
   ],
+  "quotes": [
+    {
+      "text": "A PC got her reputation track filled in session 3. The Fallout meant an aelfir magistrate now has her description. She's been running a double life ever since. No other game creates consequences like this.",
+      "author": "u/downspire_ministry, r/rpg"
+    },
+    {
+      "text": "The setting is doing things I've never seen in a fantasy RPG. It's about occupation and resistance and the cost of being the villain in someone else's story. Heavy, brilliant, completely unlike D&D.",
+      "author": "u/carrion_priest_77, r/narrativerpg"
+    }
+  ],
   "resources": [
     {
       "type": "link",

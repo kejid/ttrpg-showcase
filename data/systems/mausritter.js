@@ -10,7 +10,7 @@ registerSystem("mausritter", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzQwNjI0MDkucG5n/original/9%2BwGcB.png",
+  "heroImage": "https://preview.redd.it/about-mausritter-v0-9ddnjzceq2gf1.png?width=820&format=png&auto=webp&s=4720e331d3fc15268eadfcf8aa1a42a16b917bef",
   "playstyleTags": [
     "explore",
     "survival",
@@ -18,7 +18,17 @@ registerSystem("mausritter", {
   ],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzQwNjI0MDkucG5n/original/9%2BwGcB.png"
+      "src": "https://img.itch.zone/aW1nLzQ1Nzc4OTYucG5n/original/Dnexgj.png"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "The card inventory is the best physical design in any RPG I've played. When my mouse was Hungry AND carrying a spell stone, that slot decision felt genuinely agonizing.",
+      "author": "u/grainfield_delver, r/osr"
+    },
+    {
+      "text": "Introduced my 8-year-old niece and my grognard dad to this at the same table. Both loved it. I don't know how Isaac Williams did that but it's real.",
+      "author": "u/tinywhiskers, r/rpg"
     }
   ],
   "resources": [

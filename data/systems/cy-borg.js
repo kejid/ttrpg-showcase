@@ -10,7 +10,7 @@ registerSystem("cy-borg", {
   "players": "2–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200.jpg",
+  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG-Banner1-1440x384.jpg",
   "playstyleTags": [
     "combat",
     "survival",
@@ -18,7 +18,13 @@ registerSystem("cy-borg", {
   ],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200.jpg"
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200-1-1200x1200.jpg"
+    },
+    {
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG_20-21-1536x1536.jpg"
+    },
+    {
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG_50-51-1536x1536.jpg"
     }
   ],
   "resources": [
@@ -52,6 +58,7 @@ registerSystem("cy-borg", {
       "icon": "zap"
     }
   ],
+  "quotes": [{"text": "Whether you've got an unstoppable killer or a frail gearhead, you'll have a blast running them face first into the meat grinder of Cy. The city wants you dead, and that makes it irresistible.", "author": "Bloody Disgusting review"}, {"text": "Whereas I wouldn't run Mork Borg as anything but a one-off, Cy_Borg holds up to long-form play. The setting is thin enough that you fill it with your own neon-soaked paranoia.", "author": "TTRPG Factory, ttrpgfactory.com"}],
   "ru": {
     "tagline": "«RPG о конце света, нано-заражённых киберпанках и ярости против безжалостного корпоративного ада.»",
     "description": "Духовный наследник MÖRK BORG в жанре киберпанка — та же злая арт-панковая энергетика, та же жестокая смертность, только вместо тёмного фэнтези — неоновый смог и корпоративный ад. CY_BORG берёт всё, что сделало Мёрк Борг культом, и пропускает через хромированную мясорубку. Ты скорее всего умрёшь. Городу всё равно. Реклама продолжает мигать.",
@@ -78,7 +85,13 @@ registerSystem("cy-borg", {
     ],
     "gallery": [
       {
-        "cap": "Обложка основной книги"
+        "cap": "Обложка"
+      },
+      {
+        "cap": "Разворот правил"
+      },
+      {
+        "cap": "Арт и механики"
       }
     ],
     "resources": [
@@ -119,7 +132,13 @@ registerSystem("cy-borg", {
     ],
     "gallery": [
       {
-        "cap": "Core Rulebook cover"
+        "cap": "Cover"
+      },
+      {
+        "cap": "Rules spread"
+      },
+      {
+        "cap": "Art and mechanics"
       }
     ],
     "resources": [

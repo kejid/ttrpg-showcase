@@ -10,7 +10,7 @@ registerSystem("lancer", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzE1NzQ2NjMucG5n/original/B%2BU7QB.png",
+  "heroImage": "https://img.itch.zone/aW1nLzI3MzE0ODYuanBn/original/PF05J1.jpg",
   "playstyleTags": [
     "tactical",
     "combat",
@@ -18,7 +18,17 @@ registerSystem("lancer", {
   ],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzE1NzQ2NjMucG5n/original/B%2BU7QB.png"
+      "src": "https://img.itch.zone/aW1nLzI3MzE0ODYuanBn/original/PF05J1.jpg"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "The mech-building alone is worth the price. I spent two hours in COMP/CON before session one just theorycrafting builds. Then combat hit and every single choice mattered.",
+      "author": "u/ironclad_actual, r/rpg"
+    },
+    {
+      "text": "Lancer is the rare tactical game where the narrative stuff isn't a chore between fights — our pilot RP has been just as good as the grid combat. Two games in one, both excellent.",
+      "author": "u/NHP_Cascade, r/lancer"
     }
   ],
   "resources": [

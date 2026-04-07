@@ -2,7 +2,8 @@ registerSystem("one-ring", {
   "groups": {
     "default": { "key": "narrative", "order": 10 },
     "family": { "key": "standalone", "order": 6 },
-    "genre": { "key": "adventure", "order": 5 }
+    "genre": { "key": "adventure", "order": 5 },
+    "solo": { "key": "solo-compatible", "order": 1 }
   },
   "name": "The One Ring",
   "publisher": "Free League / Francesco Nepitello",

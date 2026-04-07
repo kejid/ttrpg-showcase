@@ -2,7 +2,8 @@ registerSystem("dragonbane", {
   "groups": {
     "default": { "key": "fl", "order": 7 },
     "family": { "key": "year-zero", "order": 7 },
-    "genre": { "key": "adventure", "order": 4 }
+    "genre": { "key": "adventure", "order": 4 },
+    "solo": { "key": "solo-compatible", "order": 8 }
   },
   "name": "Dragonbane",
   "publisher": "Free League / Year Zero Engine",

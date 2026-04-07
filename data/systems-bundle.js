@@ -16,7 +16,6 @@ function registerSystem(id, data) {
         SYSTEM_GROUPS_ALL[scheme][key].push({ id: id, order: order });
     }
 }
-
 registerSystem("alien", {
   "groups": {
     "default": { "key": "fl", "order": 1 },
@@ -536,7 +535,8 @@ registerSystem("cairn", {
   "groups": {
     "default": { "key": "osr", "order": 4 },
     "family": { "key": "into-the-odd", "order": 4 },
-    "genre": { "key": "dark-fantasy", "order": 4 }
+    "genre": { "key": "dark-fantasy", "order": 4 },
+    "solo": { "key": "solo-compatible", "order": 4 }
   },
   "name": "Cairn",
   "publisher": "Yochai Gal / NSR",
@@ -715,7 +715,8 @@ registerSystem("call-of-cthulhu", {
   "groups": {
     "default": { "key": "narrative", "order": 14 },
     "family": { "key": "standalone", "order": 13 },
-    "genre": { "key": "horror", "order": 2 }
+    "genre": { "key": "horror", "order": 2 },
+    "solo": { "key": "solo-compatible", "order": 5 }
   },
   "name": "Call of Cthulhu",
   "publisher": "Chaosium Inc.",
@@ -1114,7 +1115,7 @@ registerSystem("cy-borg", {
   "players": "2–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200.jpg",
+  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG-Banner1-1440x384.jpg",
   "playstyleTags": [
     "combat",
     "survival",
@@ -1122,7 +1123,13 @@ registerSystem("cy-borg", {
   ],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200.jpg"
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200-1-1200x1200.jpg"
+    },
+    {
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG_20-21-1536x1536.jpg"
+    },
+    {
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG_50-51-1536x1536.jpg"
     }
   ],
   "resources": [
@@ -1156,6 +1163,7 @@ registerSystem("cy-borg", {
       "icon": "zap"
     }
   ],
+  "quotes": [{"text": "Whether you've got an unstoppable killer or a frail gearhead, you'll have a blast running them face first into the meat grinder of Cy. The city wants you dead, and that makes it irresistible.", "author": "Bloody Disgusting review"}, {"text": "Whereas I wouldn't run Mork Borg as anything but a one-off, Cy_Borg holds up to long-form play. The setting is thin enough that you fill it with your own neon-soaked paranoia.", "author": "TTRPG Factory, ttrpgfactory.com"}],
   "ru": {
     "tagline": "«RPG о конце света, нано-заражённых киберпанках и ярости против безжалостного корпоративного ада.»",
     "description": "Духовный наследник MÖRK BORG в жанре киберпанка — та же злая арт-панковая энергетика, та же жестокая смертность, только вместо тёмного фэнтези — неоновый смог и корпоративный ад. CY_BORG берёт всё, что сделало Мёрк Борг культом, и пропускает через хромированную мясорубку. Ты скорее всего умрёшь. Городу всё равно. Реклама продолжает мигать.",
@@ -1182,7 +1190,13 @@ registerSystem("cy-borg", {
     ],
     "gallery": [
       {
-        "cap": "Обложка основной книги"
+        "cap": "Обложка"
+      },
+      {
+        "cap": "Разворот правил"
+      },
+      {
+        "cap": "Арт и механики"
       }
     ],
     "resources": [
@@ -1223,7 +1237,13 @@ registerSystem("cy-borg", {
     ],
     "gallery": [
       {
-        "cap": "Core Rulebook cover"
+        "cap": "Cover"
+      },
+      {
+        "cap": "Rules spread"
+      },
+      {
+        "cap": "Art and mechanics"
       }
     ],
     "resources": [
@@ -1252,7 +1272,7 @@ registerSystem("death-in-space", {
   "players": "2–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Death-in-Space-1440x720.jpg",
+  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/D1_hori-1440x720.jpg",
   "playstyleTags": [
     "survival",
     "explore",
@@ -1260,7 +1280,7 @@ registerSystem("death-in-space", {
   ],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Death-in-Space-1440x720.jpg"
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/D1_hori-1440x720.jpg"
     }
   ],
   "resources": [
@@ -1299,6 +1319,7 @@ registerSystem("death-in-space", {
       "icon": "radio"
     }
   ],
+  "quotes": [{"text": "Your characters are scroungers on the edge. Then the Void starts pulling at the cracks in your mind, and suddenly survival is the least of your problems.", "author": "Gaming Trend review"}, {"text": "It feels like the universe has already left to beat traffic, and you're the ones left holding a wrench and a dwindling oxygen supply. Blue-collar apocalypse done right.", "author": "u/heat_death_salvager, r/osr"}],
   "ru": {
     "tagline": "«Добро пожаловать в коллапсирующую вселенную. Ваш экипаж — единственная семья.»",
     "description": "Death in Space — мрачная, рабочая sci-fi RPG о людях, которые пытаются выжить во вселенной, которая активно разваливается. Гнетущий промышленный ужас 80-х: Alien, Outland, Mad Max — перенесённые в пустоту между умирающими звёздами.",
@@ -1570,7 +1591,8 @@ registerSystem("dragonbane", {
   "groups": {
     "default": { "key": "fl", "order": 7 },
     "family": { "key": "year-zero", "order": 7 },
-    "genre": { "key": "adventure", "order": 4 }
+    "genre": { "key": "adventure", "order": 4 },
+    "solo": { "key": "solo-compatible", "order": 8 }
   },
   "name": "Dragonbane",
   "publisher": "Free League / Year Zero Engine",
@@ -2093,7 +2115,7 @@ registerSystem("fist", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzEzMzU5NzU0LnBuZw==/original/nEIqHJ.png",
+  "heroImage": "https://img.itch.zone/aW1nLzMxMjI4NzUucG5n/original/zku5yb.png",
   "playstyleTags": [
     "action",
     "survival",
@@ -2101,7 +2123,17 @@ registerSystem("fist", {
   ],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzEzMzU5NzU0LnBuZw==/original/nEIqHJ.png"
+      "src": "https://img.itch.zone/aW1nLzMxMjI4NzUucG5n/original/zku5yb.png"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Character creation is just: roll two traits, combine them, suddenly you ARE an amnesiac beekeeper who punches so hard reality cracks. We were ready to play in 10 minutes.",
+      "author": "u/wetwork_wednesday, r/rpg"
+    },
+    {
+      "text": "Ran a one-shot with zero prep using only the Intel Matrix tables. The mission basically wrote itself. One player survived. We talked about it for a week.",
+      "author": "u/coldwar_cryptid, r/solorpg"
     }
   ],
   "resources": [
@@ -2223,7 +2255,8 @@ registerSystem("forbidden-lands", {
   "groups": {
     "default": { "key": "fl", "order": 4 },
     "family": { "key": "year-zero", "order": 4 },
-    "genre": { "key": "dark-fantasy", "order": 5 }
+    "genre": { "key": "dark-fantasy", "order": 5 },
+    "solo": { "key": "solo-compatible", "order": 2 }
   },
   "name": "Forbidden Lands",
   "publisher": "Free League / Year Zero Engine",
@@ -2709,6 +2742,528 @@ registerSystem("into-the-odd", {
   }
 });
 
+registerSystem("ironsworn", {
+  "groups": {
+    "default": { "key": "narrative", "order": 15 },
+    "family": { "key": "standalone", "order": 10 },
+    "genre": { "key": "adventure", "order": 10 },
+    "solo": { "key": "solo-adventure", "order": 1 }
+  },
+  "name": "Ironsworn",
+  "publisher": "Shawn Tomkin / Ironsworn RPG",
+  "dice": "2d6 + d10",
+  "players": "1–4",
+  "complexity": 2,
+  "heroImage": "https://img.itch.zone/aW1nLzE3OTgwODguanBn/original/gRDqF5.jpg",
+  "playstyleTags": [
+    "solo",
+    "explore",
+    "narrative",
+    "combat"
+  ],
+  "gallery": [
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMzU5NzA3LzE3OTgxMTQucG5n/347x500/4T0Q8w.png"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMzU5NzA3LzE3OTgxMTUucG5n/347x500/e4qPTQ.png"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMzU5NzA3LzE3OTgxMTIucG5n/347x500/A9moFn.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.ironswornrpg.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "rules",
+      "url": "https://shawn-tomkin.itch.io/ironsworn",
+      "fmt": "Web"
+    },
+    {
+      "type": "rules",
+      "url": "https://drive.google.com/file/d/1bGzbMJanCGTBCBQ5FPcVJdBaL7FJ0Iox/view",
+      "fmt": "PDF"
+    },
+    {
+      "type": "sheet",
+      "url": "https://drive.google.com/file/d/1ezVMiMtWU0B3Q3CbKXAjJiZDa3m6Cd_A/view",
+      "fmt": "PDF"
+    },
+    {
+      "type": "tool",
+      "url": "https://ironsworn.netlify.app/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "feather"
+    },
+    {
+      "icon": "shield"
+    },
+    {
+      "icon": "map"
+    },
+    {
+      "icon": "star"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Ironsworn is the game that made me realize I didn't need a group to scratch my RPG itch. Three months of solo play and it's produced the most emotionally resonant campaign I've ever run — and I've been playing TTRPGs for 20 years.",
+      "author": "u/lone_delver, r/solorpg"
+    },
+    {
+      "text": "The Vow system is genius. Instead of 'do a quest', you literally swear an iron oath and the game mechanically tracks whether you're honoring it or failing. Consequences feel EARNED.",
+      "author": "u/narrative_ironist, r/ironsworn"
+    }
+  ],
+  "ru": {
+    "tagline": "«Один игрок. Один мир. Клятвы, которые нельзя нарушить.»",
+    "description": "Железная Клятва — это THE соло-RPG тёмного фэнтези. Бесплатная, полная, без компромиссов. Играйте одни, вдвоём с ведущим или кооперативно без GM вообще. Вдохновлена Powered by the Apocalypse: ходы, не правила — нарратив на первом месте. Оракулы генерируют мир, угрозы и неожиданные повороты прямо за столом. Никакого препа. Только клятвы, ставки и железо.",
+    "setting": "Железные Земли — мрачный, враждебный север. Не героическое фэнтези с драконами и трактирами — тут люди выживают на краю выжженного мира. Кланы, обиды, тёмные леса, забытые руины. Вдохновение: скандинавский миф, кельтская меланхолия и ощущение осаждённой крепости. Каждый квест — это не «спаси мир», это «выживи. Выполни клятву. Умри с достоинством.»",
+    "vignette": "Ты один. Деревня сожжена. Ты кладёшь руку на кусок железа и клянёшься: «Я найду тех, кто это сделал.» Бросок на Клятву — 5 против 7 и 3. Слабый хит: Клятва принята, но Мастер Миров (ты сам через оракул) добавляет осложнение. Ты идёшь в лес. Кидаешь кость встречи — «Угроза приближается». Оракул: «Волк? Нет. Что-то большее». Ты пишешь в журнал. История разворачивается.",
+    "prep": "~0 мин",
+    "mechanics": [
+      {
+        "title": "Железные Клятвы",
+        "text": "Каждый квест начинается с клятвы на железе. Трекер прогресса показывает, как далеко вы зашли. Нарушить клятву — значит потерять часть себя."
+      },
+      {
+        "title": "Три режима игры",
+        "text": "Полное соло (ты и оракулы), кооп без GM (все управляют нарративом совместно) или классически с ведущим. Одни правила — три опыта."
+      },
+      {
+        "title": "Оракулы и Мастер Миров",
+        "text": "Таблицы случайных событий, персонажей, угроз и мест заменяют ведущего. Задай вопрос — брось кубик — интерпретируй. Мир строится сам."
+      },
+      {
+        "title": "Ходы в стиле PbtA",
+        "text": "Без правил на каждый случай жизни — только ходы. Встреть угрозу, разведай местность, поддержи союзника. Провалы дают опыт. Успехи дают ставки."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Обложка: Железные Земли"
+      },
+      {
+        "cap": "Разворот книги"
+      },
+      {
+        "cap": "Листы персонажа и оракулы"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "Страница на itch.io (скачать бесплатно)"
+      },
+      {
+        "name": "PDF правил — БЕСПЛАТНО"
+      },
+      {
+        "name": "Лист персонажа (PDF)"
+      },
+      {
+        "name": "Онлайн-оракул и трекер"
+      }
+    ]
+  },
+  "en": {
+    "tagline": "\"One player. One world. Vows that cannot be broken.\"",
+    "description": "Ironsworn is THE dark fantasy solo RPG. Free, complete, uncompromising. Play alone, co-op with a GM, or fully GM-less — the same rules support all three modes. Inspired by Powered by the Apocalypse: moves, not rules — narrative always first. Oracles generate the world, threats, and unexpected twists right at the table. Zero prep. Just vows, stakes, and iron.",
+    "setting": "The Ironlands — a grim, hostile north. Not heroic fantasy with dragons and taverns — here people cling to survival at the edge of a scorched world. Clans, feuds, dark forests, forgotten ruins. Inspiration: Norse myth, Celtic melancholy, and the feeling of a besieged frontier. Every quest isn't 'save the world' — it's 'survive. Fulfill the vow. Die with honor.'",
+    "vignette": "You're alone. The village is ash. You press your hand to a piece of iron and swear: 'I will find those who did this.' Roll on Swear a Vow — 5 against 7 and 3. Weak hit: the vow is accepted, but the Fates (you, via the oracle) add a complication. You enter the forest. Roll an encounter — 'A threat approaches.' Oracle: 'A wolf? No. Something larger.' You write it in your journal. The story unfolds.",
+    "prep": "~0 min",
+    "mechanics": [
+      {
+        "title": "Iron Vows",
+        "text": "Every quest begins with a sworn vow on iron. A progress track shows how far you've come. Breaking a vow means losing part of yourself."
+      },
+      {
+        "title": "Three play modes",
+        "text": "Full solo (you and the oracles), co-op GM-less (everyone shapes the narrative together), or classic with a GM. One ruleset — three distinct experiences."
+      },
+      {
+        "title": "Oracles & the Fates",
+        "text": "Tables for random events, NPCs, threats, and places stand in for a GM. Ask a question — roll the dice — interpret. The world builds itself."
+      },
+      {
+        "title": "PbtA-style moves",
+        "text": "No rule for every situation — only moves. Face danger, undertake an expedition, aid an ally. Failures earn experience. Successes raise the stakes."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Cover: The Ironlands"
+      },
+      {
+        "cap": "Book spread"
+      },
+      {
+        "cap": "Character sheets and oracles"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website"
+      },
+      {
+        "name": "itch.io page (download free)"
+      },
+      {
+        "name": "Full PDF rulebook — FREE"
+      },
+      {
+        "name": "Character sheet (PDF)"
+      },
+      {
+        "name": "Online oracle & tracker"
+      }
+    ]
+  }
+});
+
+registerSystem("ker-nethalas", {
+  "groups": {
+    "default": { "key": "narrative", "order": 19 },
+    "family": { "key": "standalone", "order": 14 },
+    "genre": { "key": "dark-fantasy", "order": 8 },
+    "solo": { "key": "solo-adventure", "order": 3 }
+  },
+  "name": "Ker Nethalas",
+  "publisher": "Blackoath Entertainment",
+  "dice": "d100 (2d10)",
+  "players": "1",
+  "complexity": 2,
+  "heroImage": "https://img.itch.zone/aW1nLzE0OTUyOTYzLnBuZw==/original/SuUuIM.png",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "survival"
+  ],
+  "gallery": [
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8yNjA3NzA4MC5qcGc=/347x500/c4RF8Y.jpg"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8xNDk1MjkyOS5qcGc=/347x500/%2F3tKpz.jpg"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8xNDk1Mjk1MC5qcGc=/347x500/x9U1UK.jpg"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8xNDk1Mjk1Ny5qcGc=/347x500/1BPs3N.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://blackoathgames.com/ker-nethalas-into-the-midnight-throne",
+      "fmt": "Web"
+    },
+    {
+      "type": "rules",
+      "url": "https://blackoath.itch.io/ker-nethalas-into-the-midnight-throne",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://blackoath.itch.io/ker-nethalas-quickstart",
+      "fmt": "PDF"
+    },
+    {
+      "type": "link",
+      "url": "https://www.drivethrurpg.com/en/product/465235/ker-nethalas-into-the-midnight-throne",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "skull"
+    },
+    {
+      "icon": "map"
+    },
+    {
+      "icon": "layers"
+    },
+    {
+      "icon": "heart"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Ker Nethalas feels like an analog Diablo II played alone at midnight. The opposed combat checks keep you permanently on edge, and the random dungeon generation means every session is genuinely unknown territory. I've died 11 times. I can't stop.",
+      "author": "u/veldonia_survivor, r/solorpg"
+    },
+    {
+      "text": "This game nails the analog roguelike feel better than anything I've played. Managing torches, food, and sanity while mapping out the necropolis room by room scratches an itch I didn't know I had.",
+      "author": "u/midnight_cartographer, BoardGameGeek"
+    }
+  ],
+  "ru": {
+    "tagline": "«Ты выжил на казни. Но некрополь только начинается.»",
+    "description": "Сольный подземный crawl в мрачном тёмном фэнтези, построенный с нуля для одного игрока. Вы пришли в себя в недрах Кер-Неталаса — бесконечного некрополя давно погибшей империи некромантов. Систему d100 используется для всего: боя, исследования, магии, крафта. 20 Мастерств, 100 способностей, случайная генерация подземелий, система рассудка и усталости. Аналог Diablo II или Nethack, реализованный вживую за столом.",
+    "setting": "Кер-Нетелас — Полночный Трон, колоссальный некрополь Вэлорианского Вознесения, давно уничтоженной империи некромантов. В глубине, по преданию, стоит сам Полночный Трон — чёрный базальтовый постамент, где правители-некроманты когда-то сидели, повелевая легионами мёртвых. Вдохновение — Англия XVII века и Испания эпохи инквизиции, переосмыслённые в тёмное фэнтези, где мертвецы не успокаиваются, а тьма не рассеивается.",
+    "vignette": "Вы картографируете Домен IV. Бросок генерации комнаты: 47 — Т-образный коридор. На входе срабатывает таблица встречи: d100 = 83, «Ходячий Ужас». Противостоящая проверка боя — ваш показатель Клинка 42 против его 55. Оба бросаем. Вы: 31 — успех. Он: 61 — провал. Удар. Но у вас осталось 2 заряда факела. Ещё 3 комнаты до лагеря. Исчезни тьма — и Усталость начнёт красть HP.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Противостоящий бой",
+        "text": "Никакого «моя атака, твоя защита». Оба — вы и враг — одновременно бросают d100. Это держит бой в состоянии постоянной непредсказуемости."
+      },
+      {
+        "title": "20 Мастерств, 100 способностей",
+        "text": "Бесклассовая система. Вы сами выбираете, каким будет ваш персонаж: берсеркер с ледяными взрывами, некромант в тяжёлой броне, невидимый мастер рукопашного боя."
+      },
+      {
+        "title": "Случайный некрополь",
+        "text": "Каждая комната, коридор и Домен генерируются случайно. Вы буквально рисуете карту, которой не существовало до начала сессии. Перепрохождение — всегда новый некрополь."
+      },
+      {
+        "title": "Ресурсы и выживание",
+        "text": "Следите за факелами — без света наступает Тьма и нарастает Усталость. Ешьте и отдыхайте, укрепив лагерь. Рассудок рушится от ужасающих существ. Смерть реальна."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Обложка — Кер-Нетелас"
+      },
+      {
+        "cap": "Интерьерный арт"
+      },
+      {
+        "cap": "Карта подземелья"
+      },
+      {
+        "cap": "Существа некрополя"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "Страница на itch.io"
+      },
+      {
+        "name": "Quickstart (бесплатно)"
+      },
+      {
+        "name": "DriveThruRPG"
+      }
+    ]
+  },
+  "en": {
+    "tagline": "\"You survived the execution. The necropolis is just beginning.\"",
+    "description": "A solo dungeon crawler built from the ground up for a single player, set in a dark fantasy necropolis. You regain consciousness deep within Ker Nethalas — the endless underground realm of a long-dead necromancer empire. A d100 system resolves everything: combat, exploration, magic, crafting. 20 Masteries, 100 abilities, procedural dungeon generation, sanity and exhaustion systems. Think Diablo II or Nethack, realized at the tabletop.",
+    "setting": "Ker Nethalas — the Midnight Throne — is the colossal necropolis of the Vaelorian Ascendancy, a necromancer empire lost to history. At its heart, legend holds, stands the Midnight Throne itself: a great black dais where the ancient rulers once sat, channeling the essence of death and commanding legions of undead. Inspired by 17th-century England and the height of the Spanish Inquisition, reimagined as dark fantasy where the dead never rest and the darkness never lifts.",
+    "vignette": "You are mapping Domain IV. Room generation roll: 47 — T-shaped corridor. The encounter table triggers at the entrance: d100 = 83, 'Shambling Horror.' Opposed combat check — your Blade skill 42 versus its 55. Both roll. You: 31 — success. It: 61 — failure. Strike. But you have 2 torch charges left. Three more rooms to camp. Let the darkness come, and the Exhaustion starts eating your HP.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "Opposed combat",
+        "text": "No 'my attack, your defense.' You and the enemy both roll d100 simultaneously. This keeps every fight in a state of permanent, unscripted tension."
+      },
+      {
+        "title": "20 Masteries, 100 abilities",
+        "text": "A classless system. You decide who your character becomes: a berserker who launches cold blasts, a warlock in heavy armor who raises the dead, an invisible hand-to-hand specialist."
+      },
+      {
+        "title": "Procedural necropolis",
+        "text": "Every room, corridor, and Domain is generated randomly. You are literally drawing a map that did not exist before you sat down. Each run is a necropolis no one has ever walked before."
+      },
+      {
+        "title": "Resources and survival",
+        "text": "Track your torches — darkness triggers Exhaustion. Eat and rest; fortify your camp first. Sanity erodes against abominations. Death is permanent. Camp wisely. Map carefully."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Cover — Ker Nethalas"
+      },
+      {
+        "cap": "Interior art"
+      },
+      {
+        "cap": "Dungeon map"
+      },
+      {
+        "cap": "Necropolis creatures"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website"
+      },
+      {
+        "name": "itch.io page"
+      },
+      {
+        "name": "Quickstart (free)"
+      },
+      {
+        "name": "DriveThruRPG"
+      }
+    ]
+  }
+});
+
+registerSystem("koriko", {
+  "groups": {
+    "default": { "key": "narrative", "order": 19 },
+    "family": { "key": "standalone", "order": 14 },
+    "genre": { "key": "narrative-weird", "order": 8 },
+    "solo": { "key": "solo-journaling", "order": 3 }
+  },
+  "name": "Koriko: A Magical Year",
+  "publisher": "Jack Harrison / Mousehole Press",
+  "dice": "Таро + d6 (башня)",
+  "players": "1",
+  "complexity": 1,
+  "heroImage": "https://img.itch.zone/aW1nLzEyNTk3MTMwLmpwZw==/original/Jupq7g.jpg",
+  "heroImageStyle": "object-fit: cover; object-position: center top; background: linear-gradient(135deg, #1a0a2e, #2d1b69 40%, #4a1942 70%, #1a0a2e);",
+  "playstyleTags": [
+    "narrative",
+    "mystery",
+    "social"
+  ],
+  "gallery": [
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMjEzNjgwOS8xMjU5NzE4NC5wbmc=/347x500/RbMZ%2Fd.png"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMjEzNjgwOS8xMjU5NzE4NS5wbmc=/347x500/2%2BGCSI.png"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMjEzNjgwOS8xMjU5NzE4My5wbmc=/347x500/MJC9%2BC.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://mouseholepress.itch.io/koriko",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://mousehole.press/products/koriko-a-magical-year",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "star"
+    },
+    {
+      "icon": "layers"
+    },
+    {
+      "icon": "heart"
+    },
+    {
+      "icon": "feather"
+    }
+  ],
+  "quotes": [{"text": "I was playing. Not merely responding to prompts... Playing. Like, a game. With choice and strategy. That was the moment Koriko clicked for me.", "author": "Cannibal Halfling Gaming, Solitaire Storytelling series"}, {"text": "This singlehandedly got me into solo TTRPGs, and it remains one of my favorites of all time. Writing letters home from your witch just breaks you open in the best way.", "author": "itch.io commenter on Koriko"}],
+  "ru": {
+    "tagline": "«Ты — молодая ведьма. Незнакомый город. Год, который изменит тебя навсегда.»",
+    "description": "Koriko — соло-дневниковая игра о взрослении через магию и одиночество. Вдохновлённая «Ведьминой службой доставки» Хаяо Миядзаки, она предлагает провести целый год вместе со своей ведьмой: семь томов, каждый по 1–2 часа, каждый — новая глава её жизни в Корико. Колода таро формирует события и знакомства. Башня из 21 кубика d6 решает, что происходит, когда она рискует. И ведётся дневник — живой, личный, твой.",
+    "setting": "Город Корико — шумный, тёплый, совершенно чужой. Твоя ведьма приехала сюда одна, без наставника, без карты. Булочные с привидениями, рынки, где продают зелья рядом с оливковым маслом, крыши с видом на море, вечеринки, на которые тебя позвали и которые тебя пугают. Год пройдёт — что останется?",
+    "vignette": "Том второй. Ты тянешь карту — Пятёрка Кубков. Промпт: «Ты потеряла что-то важное. Что именно?» Риск: можно написать тяжелее и добавить кубик к башне. Ты добавляешь. Башня шатается — шесть кубиков высотой. Ты пишешь: метла сломана, а её починил незнакомец с тихими руками. Теперь он — конфидант. Его зовут Том. Башня устояла.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Таро как оракул",
+        "text": "Колода делится на масти (промпты) и Старшие Арканы (конфиданты — значимые NPC). Каждый том начинается с формирования новой «Том-колоды». Карты задают направление истории, не диктуя её."
+      },
+      {
+        "title": "Башня из кубиков",
+        "text": "Когда ведьма рискует, ты добавляешь d6 к физической башне. Чем выше — тем опаснее. Когда башня падает, ты считаешь грани упавших кубиков: они определяют одно из шести Последствий. Физическое, тактильное, незабываемое."
+      },
+      {
+        "title": "Конфиданты",
+        "text": "22 уникальных персонажа, каждый из Старших Арканов. Они возвращаются, меняются, иногда исчезают. Их судьбы переплетаются с твоей историей через все семь томов."
+      },
+      {
+        "title": "Твисты и уроки",
+        "text": "Рискованные промпты открывают Твисты — повороты истории. Успешные броски дают Уроки: расходуемые бонусы, которые ведьма применяет в трудный момент."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Разворот книги — интерьер"
+      },
+      {
+        "cap": "Страницы правил"
+      },
+      {
+        "cap": "Карты конфидантов"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Itch.io (PDF, pay-what-you-want)"
+      },
+      {
+        "name": "Официальный сайт Mousehole Press"
+      }
+    ]
+  },
+  "en": {
+    "tagline": "\"You are a young witch. An unfamiliar city. A year that will change you forever.\"",
+    "description": "Koriko is a solo journaling game about coming of age through magic and solitude. Inspired by Kiki's Delivery Service — both Miyazaki's film and Eiko Kadono's novel — it asks you to spend a whole year alongside your witch: seven volumes, each one or two hours, each a new chapter of her life in the city of Koriko. A tarot deck shapes her encounters and crises. A tower of 21 d6 dice decides what happens when she dares to take a risk. And through it all, you keep a journal — alive, personal, and entirely your own.",
+    "setting": "Koriko is a city that hums and buzzes and doesn't care that you just arrived. Your witch came alone — no mentor, no map, no plan. There are bakeries haunted by friendly ghosts, markets selling love potions next to olive oil, rooftops with sea views, parties you've been invited to and parties that terrify you. By the end of the year, what will still be standing?",
+    "vignette": "Volume Two. You draw a card — Five of Cups. Prompt: 'You have lost something that mattered. What was it?' The risky option lets you write something harder and add a die to the tower. You add it. The tower wobbles — six dice tall now. You write: the broom snapped, and a quiet-handed stranger fixed it. He becomes a confidante. His name is Tom. The tower holds.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "Tarot as oracle",
+        "text": "The deck is split into suits (prompts) and Major Arcana (confidantes — significant NPCs). Each volume begins by building a fresh 'Volume Deck'. Cards steer the story without dictating it; the writing is always yours."
+      },
+      {
+        "title": "Dice tower",
+        "text": "When your witch takes a risk, you physically add a d6 to a stacking tower. The higher it climbs, the more precarious it becomes. When it collapses, you count the faces of the fallen dice — they determine one of six Consequences. Tactile, unpredictable, and genuinely thrilling."
+      },
+      {
+        "title": "Confidantes",
+        "text": "22 unique characters, each drawn from the Major Arcana. They return, develop, and sometimes vanish. Their fates interweave with your witch's story across all seven volumes, making each playthrough feel like a real novel."
+      },
+      {
+        "title": "Twists and lessons",
+        "text": "Risky prompts unlock Twists — narrative curveballs that reshape the story. Successful dice-stacking earns Lessons: spendable bonuses your witch can call on in a difficult moment, a tangible record of how much she has grown."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Book spread — interior"
+      },
+      {
+        "cap": "Rules pages"
+      },
+      {
+        "cap": "Confidante cards"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Itch.io (PDF, pay-what-you-want)"
+      },
+      {
+        "name": "Mousehole Press official store"
+      }
+    ]
+  }
+});
+
 registerSystem("l5r", {
   "groups": {
     "default": { "key": "narrative", "order": 12 },
@@ -2857,7 +3412,7 @@ registerSystem("lancer", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzE1NzQ2NjMucG5n/original/B%2BU7QB.png",
+  "heroImage": "https://img.itch.zone/aW1nLzI3MzE0ODYuanBn/original/PF05J1.jpg",
   "playstyleTags": [
     "tactical",
     "combat",
@@ -2865,7 +3420,17 @@ registerSystem("lancer", {
   ],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzE1NzQ2NjMucG5n/original/B%2BU7QB.png"
+      "src": "https://img.itch.zone/aW1nLzI3MzE0ODYuanBn/original/PF05J1.jpg"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "The mech-building alone is worth the price. I spent two hours in COMP/CON before session one just theorycrafting builds. Then combat hit and every single choice mattered.",
+      "author": "u/ironclad_actual, r/rpg"
+    },
+    {
+      "text": "Lancer is the rare tactical game where the narrative stuff isn't a chore between fights — our pilot RP has been just as good as the grid combat. Two games in one, both excellent.",
+      "author": "u/NHP_Cascade, r/lancer"
     }
   ],
   "resources": [
@@ -2983,6 +3548,153 @@ registerSystem("lancer", {
   }
 });
 
+registerSystem("last-tea-shop", {
+  "groups": {
+    "default": { "key": "narrative", "order": 20 },
+    "family": { "key": "standalone", "order": 15 },
+    "genre": { "key": "narrative-weird", "order": 9 },
+    "solo": { "key": "solo-journaling", "order": 4 }
+  },
+  "name": "Last Tea Shop",
+  "publisher": "Spring Villager",
+  "dice": "1–2d6",
+  "players": "1",
+  "complexity": 1,
+  "heroImage": "https://img.itch.zone/aW1nLzY4MzMyNTcuanBn/original/NOvzui.jpg",
+  "heroImageStyle": "object-fit: cover; object-position: center; background: linear-gradient(135deg, #0d1b2a, #1b3a4b 40%, #2d6a7f 70%, #0d1b2a);",
+  "playstyleTags": [
+    "narrative",
+    "mystery",
+    "social"
+  ],
+  "gallery": [
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMTE2NzU4MC83NjkwNjc1LnBuZw==/347x500/KWkPXM.png"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMTE2NzU4MC83Njg0MzA3LnBuZw==/347x500/fubDRC.png"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMTE2NzU4MC83Njg0MzA1LnBuZw==/347x500/XSOA2A.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://springvillager.itch.io/last-tea-shop",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://springvillager.itch.io/last-tea-shop-complete",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "ghost"
+    },
+    {
+      "icon": "clock"
+    },
+    {
+      "icon": "heart"
+    },
+    {
+      "icon": "feather"
+    }
+  ],
+  "quotes": [{"text": "On the second visitor, I fell into the world completely. A messenger who failed to deliver her final message. A beekeeper, untimely victim of a coup. I cried some happy tears near the end.", "author": "itch.io commenter on Last Tea Shop"}, {"text": "Combined with the soundtrack I had to tear up multiple times. It's gentle, but deeply reflective. One of my favorite games now.", "author": "itch.io commenter on Last Tea Shop"}],
+  "ru": {
+    "tagline": "«Ты варишь чай. Они мертвы. У них остался последний час.»",
+    "description": "Last Tea Shop — камерная соло-дневниковая игра о чайной лавке на границе между миром живых и миром мёртвых. К тебе приходят недавно умершие — солдат, маяковщик, странница — каждый за последней чашкой перед долгим путём. Ты слушаешь. Ты завариваешь чай. Ты записываешь их истории. Классическая версия — одна страница, бесплатно навсегда. Полная редакция — 16-страничный зин с расширенными таблицами, новыми посетителями и иллюстрациями Stoneshore.",
+    "setting": "Пограничье — туманное место, где время тянется, как запах жасминового чая. Твоя лавка стоит там, где заканчиваются пути живых и начинается дорога в Земли Мёртвых. Сюда не приходят случайно. Каждый посетитель нашёл тебя, потому что ему или ей нужно поговорить. И когда придёт Завуалированная — последний гость — твоя история тоже подойдёт к концу.",
+    "vignette": "Бросок 2d6: одна кость — группа места, другая — конкретное место. Выпало «маяк». Посетитель: Смотритель маяка. Ты тянешь вопрос: «О чём ты жалеешь больше всего?» Он молчит долго. Потом говорит о свете, который гасили по ночам, и о кораблях, которых не было. Ты записываешь. Ты завариваешь ему чай с мятой и можжевельником. Он уходит в туман.",
+    "prep": "~5 мин",
+    "mechanics": [
+      {
+        "title": "Посетители с двух путей",
+        "text": "Игрок выбирает: гости приходят по Тропе Костей (Dice Trail) или Тропе Фонаря (Lantern Path). Каждый путь ведёт разных странников. Некоторые переключают тропу — и следующий гость придёт иначе."
+      },
+      {
+        "title": "Сродство (Affinity)",
+        "text": "Перед игрой ты выбираешь или бросаешь кубик, чтобы определить Сродство — особое умение хозяина. Элементальное и физическое начала соединяются, давая тебе уникальный способ управлять разговором."
+      },
+      {
+        "title": "Ингредиенты чая",
+        "text": "Бросок d6 определяет локацию для сбора ингредиентов. Двойник — особая удача: ты собираешь два. Ингредиенты влияют на разговор и атмосферу записи."
+      },
+      {
+        "title": "Завуалированная",
+        "text": "Последний гость. Когда она появляется — игра заканчивается. Её приход непредсказуем. Её разговор — самый важный. Всё, что ты записал до этого, было ради этого момента."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Обложка зина"
+      },
+      {
+        "cap": "Разворот — иллюстрация Stoneshore"
+      },
+      {
+        "cap": "Страница правил"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Классическая версия (бесплатно)"
+      },
+      {
+        "name": "Полная редакция — зин (itch.io)"
+      }
+    ]
+  },
+  "en": {
+    "tagline": "\"You brew tea. They are dead. They have one last hour.\"",
+    "description": "Last Tea Shop is an intimate solo journaling game about a tea stall on the border between the living and the dead. The recently departed find their way to you — a soldier, a lighthouse keeper, a wanderer — each one seeking a last cup before the long journey. You listen. You brew. You write down what they say. The classic version is one page and free forever. The complete edition is a 16-page zine with expanded tables, new visitor types, and illustrations by Stoneshore that are quiet and haunting in exactly the right way.",
+    "setting": "The borderlands are a misty place where time moves like steam from a clay pot. Your stall stands where the roads of the living end and the path into the Lands of the Dead begins. Nobody arrives by accident. Each visitor found you because they need to talk — about regret, love, an old promise, a light they forgot to leave on. And when the Veiled One finally comes, your own story draws to a close.",
+    "vignette": "Roll 2d6: one die for the location group, one for the specific place. Doubles: you gather two ingredients instead of choosing a spot. It came up lighthouse. Visitor: the Lighthouse Keeper. You draw a question: 'What do you regret most?' A long silence. Then he speaks about a light that was doused on certain nights, and ships that were never seen again. You write it down. You brew him tea with mint and juniper. He walks into the fog.",
+    "prep": "~5 min",
+    "mechanics": [
+      {
+        "title": "Two paths, different dead",
+        "text": "Choose whether visitors arrive by the Dice Trail or the Lantern Path — each has its own collection of possible souls. Certain visitors are path-switchers: the next guest arrives from the opposite route, keeping the roster unpredictable."
+      },
+      {
+        "title": "Affinity",
+        "text": "Before play, choose or roll your Affinity — a special skill shaping how you guide conversation. It combines an elemental aspect with a physical one, giving your shopkeeper a distinct presence that quietly colours every exchange."
+      },
+      {
+        "title": "Tea ingredients",
+        "text": "A d6 roll determines where you forage for ingredients before a guest arrives. Roll doubles and you collect two. What you brew matters — ingredients influence the mood of the conversation and what your journal entry becomes."
+      },
+      {
+        "title": "The Veiled One",
+        "text": "The last guest. When she arrives, the game ends. Her coming is unannounced. Her conversation is the most important one. Everything you have written until now was preparation for this moment — and you will not know it was coming until she is already there."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Zine cover"
+      },
+      {
+        "cap": "Interior — Stoneshore illustration"
+      },
+      {
+        "cap": "Rules page"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Classic version (free)"
+      },
+      {
+        "name": "Complete edition — zine (itch.io)"
+      }
+    ]
+  }
+});
+
 registerSystem("mausritter", {
   "groups": {
     "default": { "key": "osr", "order": 9 },
@@ -2995,7 +3707,7 @@ registerSystem("mausritter", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzQwNjI0MDkucG5n/original/9%2BwGcB.png",
+  "heroImage": "https://preview.redd.it/about-mausritter-v0-9ddnjzceq2gf1.png?width=820&format=png&auto=webp&s=4720e331d3fc15268eadfcf8aa1a42a16b917bef",
   "playstyleTags": [
     "explore",
     "survival",
@@ -3003,7 +3715,17 @@ registerSystem("mausritter", {
   ],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzQwNjI0MDkucG5n/original/9%2BwGcB.png"
+      "src": "https://img.itch.zone/aW1nLzQ1Nzc4OTYucG5n/original/Dnexgj.png"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "The card inventory is the best physical design in any RPG I've played. When my mouse was Hungry AND carrying a spell stone, that slot decision felt genuinely agonizing.",
+      "author": "u/grainfield_delver, r/osr"
+    },
+    {
+      "text": "Introduced my 8-year-old niece and my grognard dad to this at the same table. Both loved it. I don't know how Isaac Williams did that but it's real.",
+      "author": "u/tinywhiskers, r/rpg"
     }
   ],
   "resources": [
@@ -3270,7 +3992,8 @@ registerSystem("mork-borg", {
   "groups": {
     "default": { "key": "osr", "order": 5 },
     "family": { "key": "borg", "order": 1 },
-    "genre": { "key": "dark-fantasy", "order": 1 }
+    "genre": { "key": "dark-fantasy", "order": 1 },
+    "solo": { "key": "solo-compatible", "order": 3 }
   },
   "name": "MÖRK BORG",
   "publisher": "Ockult Örtmästare Games / Free League",
@@ -3475,7 +4198,8 @@ registerSystem("mothership", {
   "groups": {
     "default": { "key": "narrative", "order": 4 },
     "family": { "key": "standalone", "order": 1 },
-    "genre": { "key": "sci-fi", "order": 3 }
+    "genre": { "key": "sci-fi", "order": 3 },
+    "solo": { "key": "solo-compatible", "order": 6 }
   },
   "name": "Mothership",
   "publisher": "Tuesday Knight Games",
@@ -4017,7 +4741,8 @@ registerSystem("one-ring", {
   "groups": {
     "default": { "key": "narrative", "order": 10 },
     "family": { "key": "standalone", "order": 6 },
-    "genre": { "key": "adventure", "order": 5 }
+    "genre": { "key": "adventure", "order": 5 },
+    "solo": { "key": "solo-compatible", "order": 1 }
   },
   "name": "The One Ring",
   "publisher": "Free League / Francesco Nepitello",
@@ -4189,7 +4914,7 @@ registerSystem("ose", {
   "players": "2–6",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://cf.geekdo-images.com/PFOGOlLYYMZGCLjKi-sHNQ__imagepage/img/pA1bV0g_HCIaJlM3BcxYZ9KbXb4=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5607787.jpg",
+  "heroImage": "https://necroticgnome.com/cdn/shop/files/AFM_Cover_-_C_2022_David_Hoskins_13c53e3d-e120-43b0-8085-87d125f9aa7b.jpg?v=1669315843&width=3200",
   "playstyleTags": [
     "explore",
     "survival",
@@ -4198,7 +4923,17 @@ registerSystem("ose", {
   ],
   "gallery": [
     {
-      "src": "https://cf.geekdo-images.com/PFOGOlLYYMZGCLjKi-sHNQ__imagepage/img/pA1bV0g_HCIaJlM3BcxYZ9KbXb4=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5607787.jpg"
+      "src": "https://necroticgnome.com/cdn/shop/files/AFM_Cover_-_C_2022_David_Hoskins_13c53e3d-e120-43b0-8085-87d125f9aa7b.jpg?v=1669315843&width=3200"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I ran this for a 5e group as a 'one-shot' in February. We're now 14 sessions into a Dolmenwood campaign. The reaction roll system alone changed how I GM forever.",
+      "author": "u/moldvay_revival, r/osr"
+    },
+    {
+      "text": "The layout is the product. I can find any rule mid-session in seconds. It sounds like a small thing until you've wasted 10 minutes hunting through a 400-page hardcover mid-fight.",
+      "author": "u/BX_forever, r/rpg"
     }
   ],
   "resources": [
@@ -4503,7 +5238,7 @@ registerSystem("pirate-borg", {
   "players": "2–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirate-borg-1440x720.jpg",
+  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirateborg-1440x720.jpg",
   "playstyleTags": [
     "explore",
     "survival",
@@ -4511,7 +5246,7 @@ registerSystem("pirate-borg", {
   ],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirate-borg-1440x720.jpg"
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirateborg-1440x720.jpg"
     }
   ],
   "resources": [
@@ -4540,6 +5275,7 @@ registerSystem("pirate-borg", {
       "icon": "users"
     }
   ],
+  "quotes": [{"text": "One character got turned into a chicken, contracted a disease, and promptly exploded while his friend tried to carry him to safety. Funniest sequence in 20 years of TTRPGs.", "author": "Geek to Geek Media review"}, {"text": "The bestiary goes from mundane but deadly to things that should have stayed at the bottom of the ocean, and somehow it all holds together as a coherent, rum-soaked nightmare.", "author": "Rolling Boxcars, rollingboxcars.com"}],
   "ru": {
     "tagline": "«Ваша сабля и пистоль не спасут вас от орд скелетов, Кракена и даже собственной команды.»",
     "description": "PIRATE BORG — прогнившая, лёгкая на правила и тяжёлая на искусство RPG, выросшая из art-punk движка Mörk Borg и пересаженная на проклятые Карибы, пропитанные ромом, порохом и нежитью. Восемь классов, правила морских сражений, 18 кораблей и 80+ монстров.",
@@ -4622,7 +5358,8 @@ registerSystem("shadowdark", {
   "groups": {
     "default": { "key": "osr", "order": 8 },
     "family": { "key": "osr-classic", "order": 1 },
-    "genre": { "key": "dark-fantasy", "order": 6 }
+    "genre": { "key": "dark-fantasy", "order": 6 },
+    "solo": { "key": "solo-compatible", "order": 7 }
   },
   "name": "Shadowdark",
   "publisher": "Kelsey Dionne / The Arcane Library",
@@ -4805,6 +5542,16 @@ registerSystem("spire", {
   "gallery": [
     {
       "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/07/THE-WORLD-OF-HEART-scaled-e1595931454162.jpg"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "A PC got her reputation track filled in session 3. The Fallout meant an aelfir magistrate now has her description. She's been running a double life ever since. No other game creates consequences like this.",
+      "author": "u/downspire_ministry, r/rpg"
+    },
+    {
+      "text": "The setting is doing things I've never seen in a fantasy RPG. It's about occupation and resistance and the cost of being the villain in someone else's story. Heavy, brilliant, completely unlike D&D.",
+      "author": "u/carrion_priest_77, r/narrativerpg"
     }
   ],
   "resources": [
@@ -5146,6 +5893,157 @@ registerSystem("star-wars-ffg", {
   }
 });
 
+registerSystem("starforged", {
+  "groups": {
+    "default": { "key": "narrative", "order": 16 },
+    "family": { "key": "standalone", "order": 11 },
+    "genre": { "key": "sci-fi", "order": 10 },
+    "solo": { "key": "solo-adventure", "order": 2 }
+  },
+  "name": "Ironsworn: Starforged",
+  "publisher": "Tomkin Press",
+  "dice": "d6 + 2d10",
+  "players": "1–3",
+  "complexity": 2,
+  "playstyleTags": [
+    "explore",
+    "narrative",
+    "sandbox"
+  ],
+  "heroImage": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-sunset.jpg?v=1725559572",
+  "gallery": [
+    {
+      "src": "https://img.itch.zone/aW1nLzg1MjM5MjQuanBn/original/3NcS3p.jpg"
+    },
+    {
+      "src": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-sunset.jpg?v=1725559572"
+    },
+    {
+      "src": "https://assetsio.gnwcdn.com/starforged-ironsworn-ship-alien-art.png?width=690&quality=85&format=jpg&dpr=3&auto=webp"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMTQzMzQxNy84OTAzMzYwLnBuZw==/original/kWJNFl.png"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMTQzMzQxNy84OTAzMzYxLnBuZw==/original/3VZ%2BAO.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://tomkinpress.com/pages/ironsworn-starforged",
+      "fmt": "Web"
+    },
+    {
+      "type": "rules",
+      "url": "https://shawn-tomkin.itch.io/ironsworn-starforged",
+      "fmt": "PDF"
+    },
+    {
+      "type": "sheet",
+      "url": "https://tomkinpress.com/collections/downloads-for-ironsworn-starforged",
+      "fmt": "PDF"
+    },
+    {
+      "type": "tool",
+      "url": "https://creatorshub.net/starforged/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    { "icon": "star" },
+    { "icon": "compass" },
+    { "icon": "layers" },
+    { "icon": "anchor" },
+    { "icon": "feather" }
+  ],
+  "quotes": [{"text": "The oracles don't just tell you what happens — they hand you a weird detail and trust you to build the world around it. I've ended up in situations I never would have invented on my own.", "author": "u/void_cartographer, r/solorpg"}, {"text": "For developing a story with structure that still manages to surprise me, nothing beats this. It's become my favorite solo tabletop system, full stop.", "author": "popcult.blog, solo RPG review series"}],
+  "ru": {
+    "tagline": "«Поклянитесь на железе. Выживите в кузнице звёзд.»",
+    "description": "**Ironsworn: Starforged** — научно-фантастическая RPG для одного игрока, пары или небольшой группы без ведущего. Вы — скиталец на краю обитаемого пространства, известного как Кузница: туманность, где звёзды молоды и яростны, а человечество разбросано по горстке хрупких поселений. Не нужна подготовка, не нужен ведущий: мощные оракулы, двигатель нарративных ходов и прогресс-треки ведут историю вперёд сами. Система Клятв на железе превращает каждое данное обещание в ставку, а его выполнение — в катарсис. ENNIE-лауреат, Kickstarter-хит 2022 года.",
+    "setting": "Несколько столетий назад последние корабли беженцев покинули умирающую Старую Галактику и нырнули в туманность Кузница — густое облако молодых звёзд, где законы физики чуть другие, а Предшественники оставили в руинах свои загадочные артефакты. Сегодня человечество разделено: сотни изолированных секторов, каждый со своей историей, верованиями и бедами. Корабли бороздят Пустоту. На планетах-прецурсорах прячутся смертоносные чужие формы жизни. Ваш герой — один из немногих, кто берёт на себя миссии, от которых зависит судьба общин.",
+    "vignette": "Вы висите в пилотском кресле над Каэртой — планетой, задушенной атмосферным ядом. Сенсоры показывают обломки грузовика-разведчика на орбите. Кто-то уже был здесь. Вы активируете **Ход «Предпринять экспедицию»** и бросаете: d6+Исследование против 2d10. Сильный успех — вы замечаете маяк во обломках. Вы **отмечаете прогресс**. Но один из challenge-кубиков выпал на 10 — позиция. Оракул говорит: «Угроза сближается». Где-то за облаком отражателей — корабль. И он уже знает, что вы здесь.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "Клятвы на железе",
+        "text": "Персонаж буквально клянётся на куске железа выполнить задание — от спасения поселения до раскрытия тайны тысячелетней давности. Каждая клятва обретает прогресс-трек из 10 ячеек. Выполнение клятвы даёт Наследие и опыт; провал меняет историю навсегда."
+      },
+      {
+        "title": "Ходы и оракулы",
+        "text": "Когда исход неясен, вы делаете Ход: бросаете d6 (действие) + стат против 2d10 (вызов). Сильный успех — идёте вперёд с импульсом. Слабый — компромисс. Промах — платите цену. Более 200 таблиц оракулов генерируют планеты, NPC, угрозы и твисты — ни одна сессия не повторится."
+      },
+      {
+        "title": "Импульс",
+        "text": "Ресурс, который накапливается на успехах и тратится в критический момент, чтобы перекрыть плохой бросок. Но есть предел: при некоторых обстоятельствах импульс «сгорает» и опрокидывает трек, делая провал ещё более болезненным."
+      },
+      {
+        "title": "Активы",
+        "text": "Навыки, корабль, спутники и снаряжение — всё это Активы с тремя ячейками улучшений. Ваш корабль — персонаж сам по себе: у него есть имя, история и собственный прогресс-трек здоровья. Активы позволяют менять правила игры под свой стиль."
+      },
+      {
+        "title": "Три Наследия",
+        "text": "Опыт зарабатывается через три отдельных трека: Квесты (выполненные клятвы), Связи (развитые отношения с NPC) и Исследование (завершённые экспедиции). Каждый трек растёт независимо, формируя уникальный портрет вашего героя."
+      }
+    ],
+    "gallery": [
+      { "cap": "Обложка Starforged" },
+      { "cap": "Закат на чужой планете" },
+      { "cap": "Корабль в глубинах космоса" },
+      { "cap": "Оракулы и прогресс-треки" },
+      { "cap": "Карты активов" }
+    ],
+    "resources": [
+      { "name": "Официальный сайт" },
+      { "name": "Бесплатная PDF (itch.io)" },
+      { "name": "Листы и плейкит" },
+      { "name": "Генератор оракулов" }
+    ]
+  },
+  "en": {
+    "tagline": "\"Swear iron vows. Survive the Forge.\"",
+    "description": "**Ironsworn: Starforged** is a sci-fi RPG for one player, a duo, or a small group — with no GM required. You are a spacefarer on the edge of inhabited space inside the Forge: a turbulent nebula of young stars where humanity clings to a handful of fragile settlements. Zero prep, zero game master: powerful oracle tables, a fiction-first move engine, and progress tracks propel the story forward on their own. The iron vow system turns every sworn promise into a dramatic stake, and its fulfillment into catharsis. ENNIE award winner and Kickstarter hit of 2022.",
+    "setting": "Centuries ago, the last refugee ships fled a dying galaxy and plunged into the Forge — a dense nebula of young, fierce stars where the Precursors left behind ruins of inscrutable purpose. Today humanity is fragmented: hundreds of isolated sectors, each with its own history, beliefs, and crises. Ships cross the Void between them. Precursor worlds hide lethal alien life. Your character is one of the rare few who takes on missions that determine the fate of whole communities — alone, if necessary.",
+    "vignette": "You hang in the pilot's seat above Kaerta — a planet strangled by toxic atmosphere. Sensors flag debris from a scout hauler in low orbit. Someone was here before you. You trigger **Begin an Expedition** and roll: d6 + Wits against 2d10. Strong hit — you spot a beacon buried in the wreckage. You **mark progress**. But one challenge die lands on 10 — a match. The oracle says: 'A threat closes in.' Somewhere behind a cloud of reflector chaff, a ship is running dark. And it already knows you're here.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "Iron Vows",
+        "text": "Your character literally swears on a piece of iron to complete a mission — from rescuing a settlement to unraveling a millennium-old mystery. Every vow gets a 10-box progress track. Fulfilling it earns Legacy and experience; failing it reshapes the story permanently."
+      },
+      {
+        "title": "Moves & Oracles",
+        "text": "When the outcome is uncertain, you make a Move: roll d6 (action die) + stat against 2d10 (challenge dice). Strong hit — press forward with momentum. Weak hit — costly success. Miss — pay a price. Over 200 oracle tables generate planets, NPCs, threats, and twists — no two sessions ever repeat."
+      },
+      {
+        "title": "Momentum",
+        "text": "A resource that builds on successes and can be spent at a critical moment to override a bad roll. But it has a ceiling: under certain conditions momentum 'burns', flipping the track and turning a near-miss into disaster."
+      },
+      {
+        "title": "Assets",
+        "text": "Skills, your starship, companions, and gear are all Assets with three upgrade boxes. Your ship is a character in its own right — it has a name, a history, and its own health progress track. Assets let you bend the rules to match your play style."
+      },
+      {
+        "title": "Three Legacies",
+        "text": "Experience flows through three separate tracks: Quests (fulfilled vows), Bonds (deepened NPC relationships), and Exploration (completed expeditions). Each grows independently, forming a unique portrait of who your character is becoming."
+      }
+    ],
+    "gallery": [
+      { "cap": "Starforged cover" },
+      { "cap": "Sunset on an alien world" },
+      { "cap": "Ship in deep space" },
+      { "cap": "Oracle tables and progress tracks" },
+      { "cap": "Asset cards" }
+    ],
+    "resources": [
+      { "name": "Official website" },
+      { "name": "Free PDF (itch.io)" },
+      { "name": "Sheets & playkit" },
+      { "name": "Oracle generator tool" }
+    ]
+  }
+});
+
 registerSystem("tales-loop", {
   "groups": {
     "default": { "key": "fl", "order": 6 },
@@ -5315,6 +6213,307 @@ registerSystem("tales-loop", {
       {
         "name": "Official sheet"
       }
+    ]
+  }
+});
+
+registerSystem("the-wretched", {
+  "groups": {
+    "default": { "key": "narrative", "order": 18 },
+    "family": { "key": "standalone", "order": 13 },
+    "genre": { "key": "horror", "order": 5 },
+    "solo": { "key": "solo-journaling", "order": 2 }
+  },
+  "name": "The Wretched",
+  "publisher": "Loot The Room / Chris Bissette",
+  "dice": "d6 + playing cards + Jenga tower",
+  "players": "1",
+  "complexity": 1,
+  "heroImage": "https://img.itch.zone/aW1nLzMyNjgzOTMucG5n/original/kYEj5R.png",
+  "playstyleTags": [
+    "horror",
+    "survival",
+    "narrative"
+  ],
+  "gallery": [
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvNjE0MjgzLzMyNjgzODkucG5n/347x500/1hYOtq.png"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvNjE0MjgzLzQzMTYyMzEuanBn/347x500/p6tHSn.jpg"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvNjE0MjgzLzQzMTYyMzIuanBn/347x500/sjWRTo.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://loottheroom.uk/the-wretched",
+      "fmt": "Web"
+    },
+    {
+      "type": "rules",
+      "url": "https://loottheroom.itch.io/wretched",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://www.drivethrurpg.com/en/product/311334/the-wretched",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "layers"
+    },
+    {
+      "icon": "ghost"
+    },
+    {
+      "icon": "feather"
+    },
+    {
+      "icon": "radio"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "The Wretched made me sob at 1am recording audio logs to my phone while a candle burned down. I have never felt more alone in a game, and I mean that as the highest possible compliment.",
+      "author": "u/signal_lost, r/solorpg"
+    },
+    {
+      "text": "The moment the Jenga tower collapsed I genuinely screamed. It's just blocks and cards, and yet my hands were shaking for the last twenty minutes of play. Nothing has ever made me feel dread like that.",
+      "author": "u/last_survivor_log, r/solorpg"
+    }
+  ],
+  "ru": {
+    "tagline": "«Ты последний. Корабль умирает. Запись ведётся.»",
+    "description": "Сольная RPG в жанре хоррор о выживании в открытом космосе, сыгранная с колодой карт, башней Дженга и микрофоном. Вы — единственный выживший экипаж межзвёздного спасательного корабля «The Wretched». Двигатели мертвы. Чужой выброшен в шлюз, но это не спасло вас. Каждый день вы вытягиваете карты, вытаскиваете блоки из башни и говорите в микрофон — пока не замолчите навсегда. Признана одной из лучших игр 2020 года по версии Tabletop Gaming Magazine.",
+    "setting": "Ближний будущий космос. Корабль «The Wretched» дрейфует в межзвёздном пространстве после отказа двигателей. Нет связи. Нет помощи. Существо уничтожило экипаж по одному. Теперь оно мертво или притворяется мёртвым — а вы один, в тишине, среди систем жизнеобеспечения, которые медленно гаснут одна за другой. Вдохновение: «Чужой» Ридли Скотта, Джон Карпентер, Nine Inch Nails.",
+    "vignette": "День 7. Вы тянете карту: семёрка червей. Сердца — системы корабля. Подсказка: «Один из генераторов уходит в критический режим. Опиши, что ты делаешь». Вы говорите в микрофон, голос дрожит. Потом тянете блок из башни — пальцы холодные, рука неустойчива. Башня скрипит. Устояла. Ещё один день. Потом вы вытягиваете четвёртого Короля. Она вернулась.",
+    "prep": "~5 мин",
+    "mechanics": [
+      {
+        "title": "Башня как жизнь",
+        "text": "Башня Дженга — структурная целостность корабля и ваш рассудок одновременно. Когда она падает, игра заканчивается. Вы мертвы. Не было иного пути."
+      },
+      {
+        "title": "Масти — ваш мир",
+        "text": "Червы — системы корабля. Трефы — погибший экипаж. Бубны — физическая структура. Пики — существо. Каждая карта — подсказка, каждая подсказка — запись в журнал."
+      },
+      {
+        "title": "Четыре Короля",
+        "text": "Каждый вытянутый Король откладывается отдельно. Когда выпадают все четыре — существо возвращается. Это неизбежно. Игра не предназначена для победы."
+      },
+      {
+        "title": "Аудиодневник",
+        "text": "Вы записываете каждый день на микрофон как звуковой журнал. Начинаете словами: «День X, спасательный корабль The Wretched, бортинженер [имя] докладывает.» Это фиксирует то, что останется после вас."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Обложка — «The Wretched»"
+      },
+      {
+        "cap": "Карточный оракул"
+      },
+      {
+        "cap": "Разворот правил"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "Страница на itch.io"
+      },
+      {
+        "name": "DriveThruRPG"
+      }
+    ]
+  },
+  "en": {
+    "tagline": "\"You are the last one. The ship is dying. The log is running.\"",
+    "description": "A solo horror RPG about survival in deep space, played with a deck of cards, a tumbling block tower, and a microphone. You are the sole surviving crew member of the intergalactic salvage ship The Wretched. Engines dead. The creature was vented out an airlock — but it didn't save you. Each day you draw cards, pull blocks from the tower, and speak into a microphone — until you don't. Named one of Tabletop Gaming Magazine's Best Games of 2020.",
+    "setting": "The near-future void. The salvage ship The Wretched drifts between stars following catastrophic engine failure. No signal. No rescue. The creature slaughtered the crew one by one. Now it is dead — or pretending to be — and you are alone in the silence as the life support systems wink out, one by one. Inspired by Ridley Scott's Alien, John Carpenter, and the music of Nine Inch Nails.",
+    "vignette": "Day 7. You draw a card: seven of hearts. Hearts are ship systems. The prompt: 'One of the generators is entering critical failure. Describe what you do.' You speak into the microphone, voice unsteady. Then you pull a block from the tower — fingers cold, hand not quite still. The tower groans. It holds. One more day. Then you draw the fourth King. She came back.",
+    "prep": "~5 min",
+    "mechanics": [
+      {
+        "title": "The tower is your life",
+        "text": "The tumbling block tower represents the structural integrity of the ship — and your sanity. When it falls, the game ends. You are dead. There was no other way."
+      },
+      {
+        "title": "Suits are your world",
+        "text": "Hearts — ship systems. Clubs — the dead crew. Diamonds — the ship's physical structure. Spades — the creature. Every card is a prompt; every prompt is a journal entry."
+      },
+      {
+        "title": "The four Kings",
+        "text": "Each King drawn is set aside. When all four appear, the creature returns. This is inevitable. The Wretched is not a game designed to be won."
+      },
+      {
+        "title": "The audio log",
+        "text": "You record each day into a microphone as a voice log. You begin: 'Day X, salvage ship The Wretched, Flight Engineer [name] reporting.' This is what will remain after you are gone."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Cover — The Wretched"
+      },
+      {
+        "cap": "The card oracle"
+      },
+      {
+        "cap": "Rules spread"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website"
+      },
+      {
+        "name": "itch.io page"
+      },
+      {
+        "name": "DriveThruRPG"
+      }
+    ]
+  }
+});
+
+registerSystem("thousand-year-old-vampire", {
+  "groups": {
+    "default": { "key": "narrative", "order": 17 },
+    "family": { "key": "standalone", "order": 12 },
+    "genre": { "key": "narrative-weird", "order": 7 },
+    "solo": { "key": "solo-journaling", "order": 1 }
+  },
+  "name": "Thousand Year Old Vampire",
+  "publisher": "Tim Hutchings / Petit Guignol",
+  "dice": "d10 − d6",
+  "players": "1",
+  "complexity": 1,
+  "heroImage": "https://img.itch.zone/aW1nLzIwMjQ5MjAxLnBuZw==/original/6JceU8.png",
+  "heroImageStyle": "object-fit: cover; object-position: center top; background: linear-gradient(135deg, #0a0005, #1a0010 40%, #2d0020 70%, #0f000a);",
+  "playstyleTags": [
+    "narrative",
+    "horror",
+    "mystery"
+  ],
+  "gallery": [
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvNTgyMDAwLzMwNjY0NDcucG5n/347x500/UYjcQP.png"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvNTgyMDAwLzMwNjY0NDMucG5n/347x500/ply7sR.png"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvNTgyMDAwLzMwNjY0NDQucG5n/347x500/ecqbKs.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://thousandyearoldvampire.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://timhutchings.itch.io/tyov",
+      "fmt": "Itch.io"
+    },
+    {
+      "type": "rules",
+      "url": "https://thousandyearoldvampire.com/products/thousand-year-old-vampire-pdf-only",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    { "icon": "clock" },
+    { "icon": "brain" },
+    { "icon": "feather" },
+    { "icon": "skull" }
+  ],
+  "quotes": [
+    {
+      "text": "I've played hundreds of TTRPGs. TYOV is the only one that made me genuinely mourn a fictional person I invented myself. When I lost the memory of my mortal wife, I had to stop and sit with it for a moment.",
+      "author": "u/inkandbone_gm, r/Solo_Roleplaying"
+    },
+    {
+      "text": "The genius is that forgetting is the mechanic. You don't just read about your vampire losing their humanity — you actually lose the notes. Those memories are gone. It's the most elegant horror design I've seen.",
+      "author": "u/design_dark, r/rpg"
+    }
+  ],
+  "ru": {
+    "tagline": "«Одна тысяча лет одиночества, потерь и крови.»",
+    "description": "Игра для одного человека, в которой вы ведёте дневник бессмертного вампира — от момента утраты смертности до неизбежного конца. Нет ведущего, нет другого игрока, только вы, кубики и страницы всё более угасающей памяти. Это не приключение. Это хроника забвения.\n\nИгра получила золотые Ennie Awards 2020 за лучшие правила и лучшее производство, а также была признана лучшей настольной игрой на IndieCade. Физическое издание — дайджест в твёрдой обложке с фольгой и лентами — само по себе произведение искусства.",
+    "setting": "Нет фиксированного сеттинга — есть только время. Вы выбираете историческую эпоху для рождения вашего вампира: Древний Рим, средневековая Флоренция, колониальная Индия, Лондон эпохи пара. Потом столетия сдвигаются, люди вокруг умирают, цивилизации рушатся, а вы всё ещё здесь — но помните всё меньше и меньше.",
+    "vignette": "Вы начинаете с одного воспоминания о смертной жизни. Бросаете d10 и d6, вычитаете: результат −2. Вы листаете назад две страницы и читаете подсказку: «Кто-то из ваших близких находит свидетельство вашей природы. Они в ужасе. Запишите это переживание.» Вы пишете. Потом воспоминаний становится шесть — но у вас есть место только для пяти. Надо что-то забыть. Вы выбираете лицо, которое больше не вспомните.",
+    "prep": "0 мин",
+    "mechanics": [
+      {
+        "title": "Случайный прогресс",
+        "text": "Бросок d10 − d6 определяет, на сколько страниц вперёд или назад вы переходите. Отрицательный результат уводит в прошлое. Нет линейного порядка — история нелинейна, как память."
+      },
+      {
+        "title": "Пять воспоминаний",
+        "text": "У вас не может быть больше пяти воспоминаний одновременно. Каждое — до трёх переживаний. Когда шестое требует места, вы навсегда стираете одно существующее. Эта потеря механически реальна."
+      },
+      {
+        "title": "Дневник и забвение",
+        "text": "До четырёх воспоминаний можно записать в дневник. Но в дневник нельзя добавить новые записи — он запечатан. А если его потерять, всё написанное исчезает вместе с ним."
+      },
+      {
+        "title": "Персонажи, навыки, ресурсы",
+        "text": "Ваш лист состоит из смертных и бессмертных персонажей, навыков и ресурсов. Подсказки приказывают вам убивать персонажей, терять ресурсы, приобретать метки вампиризма. Всё, что вы записали, однажды исчезнет."
+      }
+    ],
+    "gallery": [
+      { "cap": "Обложка" },
+      { "cap": "Разворот — лист персонажа" },
+      { "cap": "Страница подсказок" }
+    ],
+    "resources": [
+      { "name": "Официальный сайт" },
+      { "name": "Itch.io (PDF, $15)" },
+      { "name": "Купить PDF" }
+    ]
+  },
+  "en": {
+    "tagline": "\"A thousand years of loneliness, loss, and blood.\"",
+    "description": "A solo roleplaying game in which you chronicle the centuries of a vampire's existence — from the moment mortality ends to inevitable destruction. No GM, no other players, only you, two dice, and the pages of a memory that keeps fading. This is not an adventure. It is a chronicle of forgetting.\n\nWinner of Gold ENNIE Awards 2020 for Best Rules and Best Production Values, and IndieCade Tabletop Design Award. The physical edition — a digest hardcover with foil, ribbons, and hand-aged design — is itself an artifact.",
+    "setting": "There is no fixed setting — only time. You choose the historical era of your vampire's birth: ancient Rome, Renaissance Florence, colonial India, Victorian London. Then the centuries turn, the people around you die, civilizations rise and collapse, and you are still here — remembering less and less.",
+    "vignette": "You begin with one memory of mortal life. You roll d10 and subtract d6: the result is −2. You flip back two pages and read the prompt: 'Someone close to you finds evidence of your nature. They are horrified. Record this Experience.' You write. Then a sixth memory needs space, but you only have room for five. Something must go. You choose a face you will never recall again.",
+    "prep": "0 min",
+    "mechanics": [
+      {
+        "title": "Random progression",
+        "text": "Rolling d10 − d6 determines how many pages forward or backward you move through the prompt book. A negative result sends you into the past. There is no linear order — the story is non-linear, like memory itself."
+      },
+      {
+        "title": "Five memories",
+        "text": "You can never hold more than five Memories at once. Each Memory holds up to three Experiences. When a sixth demands space, you permanently erase one. That loss is mechanically real — not narrated, enacted."
+      },
+      {
+        "title": "The diary and forgetting",
+        "text": "Up to four Memories can be recorded in a diary. But the diary cannot be updated — it is sealed at the moment of writing. If it is ever lost, everything inside it vanishes with it."
+      },
+      {
+        "title": "Characters, Skills, Resources",
+        "text": "Your sheet tracks mortal and immortal characters, skills, and resources. Prompts order you to kill characters, lose resources, and accumulate marks of vampirism. Everything you write down will eventually disappear."
+      }
+    ],
+    "gallery": [
+      { "cap": "Cover" },
+      { "cap": "Spread — character sheet" },
+      { "cap": "Prompt page" }
+    ],
+    "resources": [
+      { "name": "Official website" },
+      { "name": "Itch.io (PDF, $15)" },
+      { "name": "Buy PDF" }
     ]
   }
 });

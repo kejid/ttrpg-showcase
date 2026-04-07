@@ -2,7 +2,8 @@ registerSystem("forbidden-lands", {
   "groups": {
     "default": { "key": "fl", "order": 4 },
     "family": { "key": "year-zero", "order": 4 },
-    "genre": { "key": "dark-fantasy", "order": 5 }
+    "genre": { "key": "dark-fantasy", "order": 5 },
+    "solo": { "key": "solo-compatible", "order": 2 }
   },
   "name": "Forbidden Lands",
   "publisher": "Free League / Year Zero Engine",

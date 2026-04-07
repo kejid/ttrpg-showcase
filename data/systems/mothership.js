@@ -2,7 +2,8 @@ registerSystem("mothership", {
   "groups": {
     "default": { "key": "narrative", "order": 4 },
     "family": { "key": "standalone", "order": 1 },
-    "genre": { "key": "sci-fi", "order": 3 }
+    "genre": { "key": "sci-fi", "order": 3 },
+    "solo": { "key": "solo-compatible", "order": 6 }
   },
   "name": "Mothership",
   "publisher": "Tuesday Knight Games",

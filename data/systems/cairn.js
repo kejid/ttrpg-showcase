@@ -2,7 +2,8 @@ registerSystem("cairn", {
   "groups": {
     "default": { "key": "osr", "order": 4 },
     "family": { "key": "into-the-odd", "order": 4 },
-    "genre": { "key": "dark-fantasy", "order": 4 }
+    "genre": { "key": "dark-fantasy", "order": 4 },
+    "solo": { "key": "solo-compatible", "order": 4 }
   },
   "name": "Cairn",
   "publisher": "Yochai Gal / NSR",

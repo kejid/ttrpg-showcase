@@ -2,7 +2,8 @@ registerSystem("shadowdark", {
   "groups": {
     "default": { "key": "osr", "order": 8 },
     "family": { "key": "osr-classic", "order": 1 },
-    "genre": { "key": "dark-fantasy", "order": 6 }
+    "genre": { "key": "dark-fantasy", "order": 6 },
+    "solo": { "key": "solo-compatible", "order": 7 }
   },
   "name": "Shadowdark",
   "publisher": "Kelsey Dionne / The Arcane Library",

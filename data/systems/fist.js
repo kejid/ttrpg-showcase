@@ -10,7 +10,7 @@ registerSystem("fist", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzEzMzU5NzU0LnBuZw==/original/nEIqHJ.png",
+  "heroImage": "https://img.itch.zone/aW1nLzMxMjI4NzUucG5n/original/zku5yb.png",
   "playstyleTags": [
     "action",
     "survival",
@@ -18,7 +18,17 @@ registerSystem("fist", {
   ],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzEzMzU5NzU0LnBuZw==/original/nEIqHJ.png"
+      "src": "https://img.itch.zone/aW1nLzMxMjI4NzUucG5n/original/zku5yb.png"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Character creation is just: roll two traits, combine them, suddenly you ARE an amnesiac beekeeper who punches so hard reality cracks. We were ready to play in 10 minutes.",
+      "author": "u/wetwork_wednesday, r/rpg"
+    },
+    {
+      "text": "Ran a one-shot with zero prep using only the Intel Matrix tables. The mission basically wrote itself. One player survived. We talked about it for a week.",
+      "author": "u/coldwar_cryptid, r/solorpg"
     }
   ],
   "resources": [

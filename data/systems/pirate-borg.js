@@ -10,7 +10,7 @@ registerSystem("pirate-borg", {
   "players": "2–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirate-borg-1440x720.jpg",
+  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirateborg-1440x720.jpg",
   "playstyleTags": [
     "explore",
     "survival",
@@ -18,7 +18,7 @@ registerSystem("pirate-borg", {
   ],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirate-borg-1440x720.jpg"
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirateborg-1440x720.jpg"
     }
   ],
   "resources": [
@@ -47,6 +47,7 @@ registerSystem("pirate-borg", {
       "icon": "users"
     }
   ],
+  "quotes": [{"text": "One character got turned into a chicken, contracted a disease, and promptly exploded while his friend tried to carry him to safety. Funniest sequence in 20 years of TTRPGs.", "author": "Geek to Geek Media review"}, {"text": "The bestiary goes from mundane but deadly to things that should have stayed at the bottom of the ocean, and somehow it all holds together as a coherent, rum-soaked nightmare.", "author": "Rolling Boxcars, rollingboxcars.com"}],
   "ru": {
     "tagline": "«Ваша сабля и пистоль не спасут вас от орд скелетов, Кракена и даже собственной команды.»",
     "description": "PIRATE BORG — прогнившая, лёгкая на правила и тяжёлая на искусство RPG, выросшая из art-punk движка Mörk Borg и пересаженная на проклятые Карибы, пропитанные ромом, порохом и нежитью. Восемь классов, правила морских сражений, 18 кораблей и 80+ монстров.",
