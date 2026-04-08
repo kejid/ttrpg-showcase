@@ -458,7 +458,10 @@ function showPage(id, pushHistory = true) {
     document.querySelectorAll('.system-page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
     // Lazy-render system page on demand
-    if (id !== 'results') ensureSystemRendered(id);
+    if (id !== 'results') {
+        ensureSystemRendered(id);
+        renderVoteButtons(id);
+    }
     const page = document.getElementById(id);
     if (page) {
         page.classList.add('active');
