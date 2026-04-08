@@ -16,6 +16,24 @@ function registerSystem(id, data) {
         SYSTEM_GROUPS_ALL[scheme][key].push({ id: id, order: order });
     }
 }
+// ============ SYSTEM REGISTRY ============
+// Each system file calls registerSystem(id, data) to register itself.
+// After all files load, app.js reads SYSTEMS_REGISTRY and builds groups.
+
+const SYSTEMS_REGISTRY = {};
+const SYSTEM_GROUPS_ALL = {}; // { "default": { "osr": [{id, order},...] }, "family": {...}, "genre": {...} }
+
+function registerSystem(id, data) {
+    SYSTEMS_REGISTRY[id] = data;
+    var groups = data.groups || {};
+    for (var scheme in groups) {
+        if (!SYSTEM_GROUPS_ALL[scheme]) SYSTEM_GROUPS_ALL[scheme] = {};
+        var key = groups[scheme].key;
+        var order = groups[scheme].order != null ? groups[scheme].order : 999;
+        if (!SYSTEM_GROUPS_ALL[scheme][key]) SYSTEM_GROUPS_ALL[scheme][key] = [];
+        SYSTEM_GROUPS_ALL[scheme][key].push({ id: id, order: order });
+    }
+}
 registerSystem("alien", {
   "groups": {
     "default": { "key": "fl", "order": 1 },
@@ -190,7 +208,6 @@ registerSystem("alien", {
     ]
   }
 });
-
 registerSystem("blade-runner", {
   "groups": {
     "default": { "key": "fl", "order": 2 },
@@ -372,7 +389,6 @@ registerSystem("blade-runner", {
     ]
   }
 });
-
 registerSystem("blades", {
   "groups": {
     "default": { "key": "narrative", "order": 5 },
@@ -530,7 +546,6 @@ registerSystem("blades", {
     ]
   }
 });
-
 registerSystem("cairn", {
   "groups": {
     "default": { "key": "osr", "order": 4 },
@@ -710,7 +725,6 @@ registerSystem("cairn", {
     ]
   }
 });
-
 registerSystem("call-of-cthulhu", {
   "groups": {
     "default": { "key": "narrative", "order": 14 },
@@ -893,7 +907,6 @@ registerSystem("call-of-cthulhu", {
     ]
   }
 });
-
 registerSystem("coriolis", {
   "groups": {
     "default": { "key": "fl", "order": 8 },
@@ -1102,7 +1115,6 @@ registerSystem("coriolis", {
     ]
   }
 });
-
 registerSystem("cy-borg", {
   "groups": {
     "default": { "key": "osr", "order": 6 },
@@ -1259,7 +1271,6 @@ registerSystem("cy-borg", {
     ]
   }
 });
-
 registerSystem("death-in-space", {
   "groups": {
     "default": { "key": "fl", "order": 9 },
@@ -1409,7 +1420,6 @@ registerSystem("death-in-space", {
     ]
   }
 });
-
 registerSystem("delta-green", {
   "groups": {
     "default": { "key": "narrative", "order": 7 },
@@ -1586,7 +1596,6 @@ registerSystem("delta-green", {
     ]
   }
 });
-
 registerSystem("dragonbane", {
   "groups": {
     "default": { "key": "fl", "order": 7 },
@@ -1773,7 +1782,6 @@ registerSystem("dragonbane", {
     ]
   }
 });
-
 registerSystem("draw-steel", {
   "groups": {
     "default": { "key": "tactical", "order": 1 },
@@ -1927,7 +1935,6 @@ registerSystem("draw-steel", {
     ]
   }
 });
-
 registerSystem("electric-bastionland", {
   "groups": {
     "default": { "key": "osr", "order": 2 },
@@ -2102,7 +2109,6 @@ registerSystem("electric-bastionland", {
     ]
   }
 });
-
 registerSystem("fist", {
   "groups": {
     "default": { "key": "osr", "order": 11 },
@@ -2250,7 +2256,6 @@ registerSystem("fist", {
     ]
   }
 });
-
 registerSystem("forbidden-lands", {
   "groups": {
     "default": { "key": "fl", "order": 4 },
@@ -2440,7 +2445,6 @@ registerSystem("forbidden-lands", {
     ]
   }
 });
-
 registerSystem("heart", {
   "groups": {
     "default": { "key": "narrative", "order": 1 },
@@ -2604,7 +2608,6 @@ registerSystem("heart", {
     ]
   }
 });
-
 registerSystem("into-the-odd", {
   "groups": {
     "default": { "key": "osr", "order": 1 },
@@ -2741,7 +2744,6 @@ registerSystem("into-the-odd", {
     ]
   }
 });
-
 registerSystem("ironsworn", {
   "groups": {
     "default": { "key": "narrative", "order": 15 },
@@ -2930,7 +2932,6 @@ registerSystem("ironsworn", {
     ]
   }
 });
-
 registerSystem("ker-nethalas", {
   "groups": {
     "default": { "key": "narrative", "order": 19 },
@@ -3116,7 +3117,6 @@ registerSystem("ker-nethalas", {
     ]
   }
 });
-
 registerSystem("koriko", {
   "groups": {
     "default": { "key": "narrative", "order": 19 },
@@ -3263,7 +3263,6 @@ registerSystem("koriko", {
     ]
   }
 });
-
 registerSystem("l5r", {
   "groups": {
     "default": { "key": "narrative", "order": 12 },
@@ -3399,7 +3398,6 @@ registerSystem("l5r", {
     ]
   }
 });
-
 registerSystem("lancer", {
   "groups": {
     "default": { "key": "tactical", "order": 3 },
@@ -3547,7 +3545,6 @@ registerSystem("lancer", {
     ]
   }
 });
-
 registerSystem("last-tea-shop", {
   "groups": {
     "default": { "key": "narrative", "order": 20 },
@@ -3694,7 +3691,6 @@ registerSystem("last-tea-shop", {
     ]
   }
 });
-
 registerSystem("mausritter", {
   "groups": {
     "default": { "key": "osr", "order": 9 },
@@ -3842,7 +3838,6 @@ registerSystem("mausritter", {
     ]
   }
 });
-
 registerSystem("microscope", {
   "groups": {
     "default": { "key": "narrative", "order": 9 },
@@ -3987,7 +3982,6 @@ registerSystem("microscope", {
     ]
   }
 });
-
 registerSystem("mork-borg", {
   "groups": {
     "default": { "key": "osr", "order": 5 },
@@ -4193,7 +4187,6 @@ registerSystem("mork-borg", {
     ]
   }
 });
-
 registerSystem("mothership", {
   "groups": {
     "default": { "key": "narrative", "order": 4 },
@@ -4391,7 +4384,6 @@ registerSystem("mothership", {
     ]
   }
 });
-
 registerSystem("mythic-bastionland", {
   "groups": {
     "default": { "key": "osr", "order": 3 },
@@ -4582,7 +4574,6 @@ registerSystem("mythic-bastionland", {
     ]
   }
 });
-
 registerSystem("nimble", {
   "groups": {
     "default": { "key": "tactical", "order": 2 },
@@ -4736,7 +4727,6 @@ registerSystem("nimble", {
     ]
   }
 });
-
 registerSystem("one-ring", {
   "groups": {
     "default": { "key": "narrative", "order": 10 },
@@ -4901,7 +4891,6 @@ registerSystem("one-ring", {
     ]
   }
 });
-
 registerSystem("ose", {
   "groups": {
     "default": { "key": "osr", "order": 10 },
@@ -5050,7 +5039,6 @@ registerSystem("ose", {
     ]
   }
 });
-
 registerSystem("outgunned", {
   "groups": {
     "default": { "key": "narrative", "order": 11 },
@@ -5225,7 +5213,6 @@ registerSystem("outgunned", {
     ]
   }
 });
-
 registerSystem("pirate-borg", {
   "groups": {
     "default": { "key": "osr", "order": 7 },
@@ -5353,7 +5340,6 @@ registerSystem("pirate-borg", {
     ]
   }
 });
-
 registerSystem("shadowdark", {
   "groups": {
     "default": { "key": "osr", "order": 8 },
@@ -5520,7 +5506,6 @@ registerSystem("shadowdark", {
     ]
   }
 });
-
 registerSystem("spire", {
   "groups": {
     "default": { "key": "narrative", "order": 2 },
@@ -5533,7 +5518,7 @@ registerSystem("spire", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://rowanrookanddecard.com/wp-content/uploads/2020/07/THE-WORLD-OF-HEART-scaled-e1595931454162.jpg",
+  "heroImage": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Necropolis2-1.jpg",
   "playstyleTags": [
     "narrative",
     "social",
@@ -5541,7 +5526,13 @@ registerSystem("spire", {
   ],
   "gallery": [
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/07/THE-WORLD-OF-HEART-scaled-e1595931454162.jpg"
+      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Necropolis2-1.jpg"
+    },
+    {
+      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/01/Spire-1.2.jpg"
+    },
+    {
+      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Combat_Example2.jpg"
     }
   ],
   "quotes": [
@@ -5611,7 +5602,13 @@ registerSystem("spire", {
     ],
     "gallery": [
       {
-        "cap": "Мир Спайра и Сердца"
+        "cap": "Некрополь Спайра"
+      },
+      {
+        "cap": "Город-миля"
+      },
+      {
+        "cap": "Пример боя"
       }
     ],
     "resources": [
@@ -5652,7 +5649,13 @@ registerSystem("spire", {
     ],
     "gallery": [
       {
-        "cap": "The world of Spire and Heart"
+        "cap": "The Necropolis of Spire"
+      },
+      {
+        "cap": "The mile-high city"
+      },
+      {
+        "cap": "Combat example"
       }
     ],
     "resources": [
@@ -5668,7 +5671,6 @@ registerSystem("spire", {
     ]
   }
 });
-
 registerSystem("star-wars-ffg", {
   "groups": {
     "default": { "key": "narrative", "order": 13 },
@@ -5892,7 +5894,6 @@ registerSystem("star-wars-ffg", {
     ]
   }
 });
-
 registerSystem("starforged", {
   "groups": {
     "default": { "key": "narrative", "order": 16 },
@@ -6043,7 +6044,6 @@ registerSystem("starforged", {
     ]
   }
 });
-
 registerSystem("tales-loop", {
   "groups": {
     "default": { "key": "fl", "order": 6 },
@@ -6216,7 +6216,6 @@ registerSystem("tales-loop", {
     ]
   }
 });
-
 registerSystem("the-wretched", {
   "groups": {
     "default": { "key": "narrative", "order": 18 },
@@ -6382,7 +6381,6 @@ registerSystem("the-wretched", {
     ]
   }
 });
-
 registerSystem("thousand-year-old-vampire", {
   "groups": {
     "default": { "key": "narrative", "order": 17 },
@@ -6517,7 +6515,6 @@ registerSystem("thousand-year-old-vampire", {
     ]
   }
 });
-
 registerSystem("triangle", {
   "groups": {
     "default": { "key": "narrative", "order": 3 },
@@ -6690,7 +6687,6 @@ registerSystem("triangle", {
     ]
   }
 });
-
 registerSystem("twilight", {
   "groups": {
     "default": { "key": "fl", "order": 5 },
@@ -6855,7 +6851,6 @@ registerSystem("twilight", {
     ]
   }
 });
-
 registerSystem("uvg", {
   "groups": {
     "default": { "key": "narrative", "order": 8 },
@@ -7039,7 +7034,6 @@ registerSystem("uvg", {
     ]
   }
 });
-
 registerSystem("vaesen", {
   "groups": {
     "default": { "key": "fl", "order": 3 },
@@ -7185,7 +7179,6 @@ registerSystem("vaesen", {
     ]
   }
 });
-
 registerSystem("wildsea", {
   "groups": {
     "default": { "key": "narrative", "order": 6 },
@@ -7380,4 +7373,3 @@ registerSystem("wildsea", {
     ]
   }
 });
-

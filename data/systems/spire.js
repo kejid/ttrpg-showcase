@@ -10,7 +10,7 @@ registerSystem("spire", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://rowanrookanddecard.com/wp-content/uploads/2020/07/THE-WORLD-OF-HEART-scaled-e1595931454162.jpg",
+  "heroImage": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Necropolis2-1.jpg",
   "playstyleTags": [
     "narrative",
     "social",
@@ -18,7 +18,13 @@ registerSystem("spire", {
   ],
   "gallery": [
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/07/THE-WORLD-OF-HEART-scaled-e1595931454162.jpg"
+      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Necropolis2-1.jpg"
+    },
+    {
+      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/01/Spire-1.2.jpg"
+    },
+    {
+      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Combat_Example2.jpg"
     }
   ],
   "quotes": [
@@ -88,7 +94,13 @@ registerSystem("spire", {
     ],
     "gallery": [
       {
-        "cap": "Мир Спайра и Сердца"
+        "cap": "Некрополь Спайра"
+      },
+      {
+        "cap": "Город-миля"
+      },
+      {
+        "cap": "Пример боя"
       }
     ],
     "resources": [
@@ -129,7 +141,13 @@ registerSystem("spire", {
     ],
     "gallery": [
       {
-        "cap": "The world of Spire and Heart"
+        "cap": "The Necropolis of Spire"
+      },
+      {
+        "cap": "The mile-high city"
+      },
+      {
+        "cap": "Combat example"
       }
     ],
     "resources": [
