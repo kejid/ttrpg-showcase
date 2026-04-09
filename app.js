@@ -673,6 +673,18 @@ function clearTagFilter() {
     renderResults();
 }
 
+function toggleTagFilterPanel() {
+    const panel = document.getElementById('results-tag-filter');
+    if (panel) panel.classList.toggle('expanded');
+}
+
+function updateTagFilterHeaderCount() {
+    const panel = document.getElementById('results-tag-filter');
+    if (!panel) return;
+    const badge = panel.querySelector('.tag-filter-active-count');
+    if (badge) badge.textContent = tagFilter.size > 0 ? `(${tagFilter.size})` : '';
+}
+
 function renderTagFilter(allSystems) {
     const panel = document.getElementById('results-tag-filter');
     if (!panel) return;
@@ -688,8 +700,32 @@ function renderTagFilter(allSystems) {
     const sortedSet = Object.keys(setCounts).sort((a, b) => setCounts[b] - setCounts[a]);
     const totalCount = allSystems.length;
 
-    let html = `<div class="tag-filter-title" data-i18n="tag_filter_title">${t('tag_filter_title')}</div>`;
-    html += `<button class="tag-filter-btn ${tagFilter.size === 0 ? 'active' : ''}" onclick="clearTagFilter()">
+    // Fingerprint of the rendered DOM. If unchanged, only update .active classes
+    // in place — avoids innerHTML rewrite + lucide re-creation (which causes flicker).
+    const fingerprint = JSON.stringify({
+        lang: typeof currentLang !== 'undefined' ? currentLang : '',
+        n: totalCount,
+        p: sortedPlay.map(k => [k, playCounts[k]]),
+        s: sortedSet.map(k => [k, setCounts[k]])
+    });
+    if (panel.dataset.tagFingerprint === fingerprint) {
+        panel.querySelectorAll('.tag-filter-btn[data-tag-key]').forEach(btn => {
+            btn.classList.toggle('active', tagFilter.has(btn.dataset.tagKey));
+        });
+        const allBtn = panel.querySelector('.tag-filter-btn[data-tag-all]');
+        if (allBtn) allBtn.classList.toggle('active', tagFilter.size === 0);
+        updateTagFilterHeaderCount();
+        return;
+    }
+
+    let html = `<button type="button" class="tag-filter-header" onclick="toggleTagFilterPanel()">
+        <i data-lucide="sliders-horizontal"></i>
+        <span class="tag-filter-title-text" data-i18n="tag_filter_title">${t('tag_filter_title')}</span>
+        <span class="tag-filter-active-count"></span>
+        <i data-lucide="chevron-down" class="tag-filter-chev"></i>
+    </button>`;
+    html += `<div class="tag-filter-body">`;
+    html += `<button class="tag-filter-btn ${tagFilter.size === 0 ? 'active' : ''}" data-tag-all onclick="clearTagFilter()">
         <span class="tag-filter-label" data-i18n="tag_filter_all">${t('tag_filter_all')}</span>
         <span class="tag-filter-count">${totalCount}</span>
     </button>`;
@@ -699,7 +735,7 @@ function renderTagFilter(allSystems) {
         sortedPlay.forEach(tag => {
             const cfg = TAG_CONFIG[tag];
             const isActive = tagFilter.has(tag);
-            html += `<button class="tag-filter-btn ${isActive ? 'active' : ''}" onclick="toggleTagFilter('${tag}')">
+            html += `<button class="tag-filter-btn ${isActive ? 'active' : ''}" data-tag-key="${tag}" onclick="toggleTagFilter('${tag}')">
                 <i data-lucide="${cfg.icon}"></i>
                 <span class="tag-filter-label">${cfg.label}</span>
                 <span class="tag-filter-count">${playCounts[tag]}</span>
@@ -712,15 +748,18 @@ function renderTagFilter(allSystems) {
         sortedSet.forEach(tag => {
             const cfg = SETTING_TAG_CONFIG[tag];
             const isActive = tagFilter.has(tag);
-            html += `<button class="tag-filter-btn setting ${isActive ? 'active' : ''}" onclick="toggleTagFilter('${tag}')">
+            html += `<button class="tag-filter-btn setting ${isActive ? 'active' : ''}" data-tag-key="${tag}" onclick="toggleTagFilter('${tag}')">
                 <i data-lucide="${cfg.icon}"></i>
                 <span class="tag-filter-label">${cfg.label}</span>
                 <span class="tag-filter-count">${setCounts[tag]}</span>
             </button>`;
         });
     }
+    html += `</div>`;
 
     panel.innerHTML = html;
+    panel.dataset.tagFingerprint = fingerprint;
+    updateTagFilterHeaderCount();
     refreshIcons();
 }
 

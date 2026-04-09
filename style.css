@@ -981,6 +981,37 @@ body:not(.presentation) .pres-counter { display: none; }
     position: sticky;
     top: 24px;
 }
+.tag-filter-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px 8px;
+    background: transparent;
+    border: none;
+    color: var(--dim);
+    font-family: 'Unbounded', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: default;
+    text-align: left;
+    width: 100%;
+}
+.tag-filter-header > svg { width: 14px; height: 14px; flex-shrink: 0; }
+.tag-filter-header .tag-filter-title-text { flex-shrink: 0; }
+.tag-filter-header .tag-filter-active-count {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0;
+    text-transform: none;
+}
+.tag-filter-header .tag-filter-chev { display: none; margin-left: auto; transition: transform 0.2s; }
+.tag-filter-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 .tag-filter-title {
     font-family: 'Unbounded', sans-serif;
     font-size: 11px;
@@ -1452,11 +1483,29 @@ body.browse-mode .setup-players-btn { display: flex; }
     .results-layout { flex-direction: column; gap: 12px; }
     .tag-filter {
         width: 100%;
+        position: static;
+        gap: 0;
+    }
+    .tag-filter-header {
+        cursor: pointer;
+        padding: 10px 14px;
+        border: 1px solid var(--border-subtle);
+        border-radius: 8px;
+        background: transparent;
+        font-size: 12px;
+        min-height: 44px;
+    }
+    .tag-filter-header .tag-filter-chev { display: inline-block; }
+    .tag-filter.expanded .tag-filter-header .tag-filter-chev { transform: rotate(180deg); }
+    .tag-filter-body {
+        display: none;
         flex-direction: row;
         flex-wrap: wrap;
-        position: static;
+        gap: 6px;
+        margin-top: 8px;
     }
-    .tag-filter-title { width: 100%; padding: 0 4px 4px; }
+    .tag-filter.expanded .tag-filter-body { display: flex; }
+    .tag-filter-section { width: 100%; padding: 8px 4px 2px; }
     .tag-filter-btn { padding: 6px 10px; font-size: 11px; }
     .results-grid.list-view .result-card-img { width: 120px; min-width: 120px; }
     .result-card-img { height: 120px; }
