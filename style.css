@@ -186,12 +186,6 @@ body {
     color: var(--red);
     margin-top: 10px;
 }
-.setup-start-btn.submit-btn {
-    background: transparent;
-    border: 1px solid rgba(139,92,246,0.3);
-    color: #a78bfa;
-    margin-top: 8px;
-}
 
 /* Sidebar */
 .sidebar {
@@ -1669,6 +1663,8 @@ body.browse-mode .setup-players-btn { display: flex; }
 }
 .custom-edit-btn:hover { border-color: var(--accent); color: var(--text); }
 .custom-edit-btn svg { width: 14px; height: 14px; }
+.custom-submit-btn { border-color: rgba(139,92,246,0.3); color: #a78bfa; }
+.custom-submit-btn:hover { border-color: #a78bfa; color: #c4b5fd; }
 
 /* Editor button row */
 .editor-btn-row {

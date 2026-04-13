@@ -1350,7 +1350,6 @@ function openEditor(editId) {
     const overlay = document.getElementById('editor-overlay');
     const heading = document.getElementById('editor-heading');
     const deleteBtn = document.getElementById('editor-delete-btn');
-    const submitBtn = document.getElementById('editor-submit-btn');
 
     // Reset form
     setFormFields('editor', {
@@ -1381,13 +1380,11 @@ function openEditor(editId) {
             heading.textContent = t('editor_title_edit');
             heading.setAttribute('data-i18n', 'editor_title_edit');
             deleteBtn.style.display = 'block';
-            submitBtn.style.display = 'block';
         }
     } else {
         heading.textContent = t('editor_title');
         heading.setAttribute('data-i18n', 'editor_title');
         deleteBtn.style.display = 'none';
-        submitBtn.style.display = 'none';
     }
 
     openDialog('editor');
@@ -1485,7 +1482,8 @@ function buildCustomSystemPage(sys) {
     };
 
     const escId = sys.id.replace(/'/g, "\\'");
-    const editBtn = ' <button class="custom-edit-btn" onclick="event.stopPropagation();openEditor(\'' + escId + '\')"><i data-lucide="pencil"></i> Edit</button>';
+    const editBtn = ' <button class="custom-edit-btn" onclick="event.stopPropagation();openEditor(\'' + escId + '\')"><i data-lucide="pencil"></i> Edit</button>' +
+        ' <button class="custom-edit-btn custom-submit-btn" id="submit-btn-' + sys.id + '" onclick="event.stopPropagation();submitCustomSystemById(\'' + escId + '\')"><i data-lucide="send"></i> <span data-i18n="editor_submit">' + t('editor_submit') + '</span></button>';
 
     const html =
         '<section id="' + sys.id + '" class="system-page">' +
@@ -1548,16 +1546,15 @@ function deleteCustomSystemFromEditor() {
     deleteCustomSystem(id);
 }
 
-async function submitCustomSystem() {
-    const id = document.getElementById('editor-id').value;
-    if (!id) { alert(t('editor_submit_save_first')); return; }
-
+async function submitCustomSystemById(id) {
     const sys = CustomSystems.find(id);
     if (!sys) return;
 
-    const btn = document.getElementById('editor-submit-btn');
-    const original = btn.textContent;
-    btn.textContent = t('editor_submit_sending');
+    const btn = document.getElementById('submit-btn-' + id);
+    if (!btn) return;
+    const label = btn.querySelector('span');
+    const original = label.textContent;
+    label.textContent = t('editor_submit_sending');
     btn.disabled = true;
 
     try {
@@ -1572,12 +1569,12 @@ async function submitCustomSystem() {
             })
         });
         const data = await res.json();
-        btn.textContent = res.ok ? t('editor_submit_ok') : t('editor_submit_fail');
+        label.textContent = res.ok ? t('editor_submit_ok') : t('editor_submit_fail');
     } catch (e) {
-        btn.textContent = t('editor_submit_fail');
+        label.textContent = t('editor_submit_fail');
     }
 
-    setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
+    setTimeout(() => { label.textContent = original; btn.disabled = false; }, 2000);
 }
 
 function renderCustomSystems() {
