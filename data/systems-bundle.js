@@ -956,7 +956,7 @@ registerSystem("coriolis", {
     },
     {
       "type": "quickstart",
-      "url": "https://freeleaguepublishing.com/wp-content/uploads/2017/02/CORIOLIS_QUICKSTART.pdf",
+      "url": "https://www.drivethrurpg.com/en/product/204702/coriolis-the-third-horizon-quickstart",
       "fmt": "PDF"
     }
   ],
@@ -2296,7 +2296,7 @@ registerSystem("forbidden-lands", {
     },
     {
       "type": "sheet",
-      "url": "https://freeleaguepublishing.com/wp-content/uploads/2018/10/Forbidden_Lands_Sheets_Color.pdf",
+      "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Forbidden_Lands_Sheets_Color.pdf",
       "fmt": "PDF"
     },
     {
@@ -2786,17 +2786,17 @@ registerSystem("ironsworn", {
     },
     {
       "type": "rules",
-      "url": "https://drive.google.com/file/d/1bGzbMJanCGTBCBQ5FPcVJdBaL7FJ0Iox/view",
+      "url": "https://shawn-tomkin.itch.io/ironsworn",
       "fmt": "PDF"
     },
     {
       "type": "sheet",
-      "url": "https://drive.google.com/file/d/1ezVMiMtWU0B3Q3CbKXAjJiZDa3m6Cd_A/view",
+      "url": "https://tomkinpress.com/products/ironsworn-playkit",
       "fmt": "PDF"
     },
     {
       "type": "tool",
-      "url": "https://ironsworn.netlify.app/",
+      "url": "https://nboughton.uk/apps/ironsworn-campaign/",
       "fmt": "Web"
     }
   ],
@@ -4778,8 +4778,8 @@ registerSystem("one-ring", {
     },
     {
       "type": "sheet",
-      "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The-Lord-of-the-Rings-Roleplaying-character-sheet.pdf",
-      "fmt": "PDF"
+      "url": "https://freeleaguepublishing.com/wp-content/uploads/2025/09/TOR_Character-Sheets.zip",
+      "fmt": "ZIP"
     }
   ],
   "mechanics": [
@@ -5964,7 +5964,7 @@ registerSystem("starforged", {
     },
     {
       "type": "tool",
-      "url": "https://creatorshub.net/starforged/",
+      "url": "https://nboughton.uk/apps/stargazer/",
       "fmt": "Web"
     }
   ],
@@ -6105,7 +6105,7 @@ registerSystem("tales-loop", {
     },
     {
       "type": "sheet",
-      "url": "https://modiphius.net/products/tales-from-the-loop-character-sheet",
+      "url": "https://www.drivethrurpg.com/en/product/210617/tales-from-the-loop-character-sheet",
       "fmt": "PDF"
     }
   ],
@@ -6911,7 +6911,7 @@ registerSystem("uvg", {
   "resources": [
     {
       "type": "link",
-      "url": "https://wizardthieffighter.itch.io/uvg2e",
+      "url": "https://wizardthieffighter.itch.io/uvg-2e",
       "fmt": "Web"
     },
     {

@@ -43,7 +43,7 @@ registerSystem("forbidden-lands", {
     },
     {
       "type": "sheet",
-      "url": "https://freeleaguepublishing.com/wp-content/uploads/2018/10/Forbidden_Lands_Sheets_Color.pdf",
+      "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Forbidden_Lands_Sheets_Color.pdf",
       "fmt": "PDF"
     },
     {

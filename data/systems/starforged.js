@@ -52,7 +52,7 @@ registerSystem("starforged", {
     },
     {
       "type": "tool",
-      "url": "https://creatorshub.net/starforged/",
+      "url": "https://nboughton.uk/apps/stargazer/",
       "fmt": "Web"
     }
   ],

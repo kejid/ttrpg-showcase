@@ -42,7 +42,7 @@ registerSystem("tales-loop", {
     },
     {
       "type": "sheet",
-      "url": "https://modiphius.net/products/tales-from-the-loop-character-sheet",
+      "url": "https://www.drivethrurpg.com/en/product/210617/tales-from-the-loop-character-sheet",
       "fmt": "PDF"
     }
   ],

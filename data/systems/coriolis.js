@@ -60,7 +60,7 @@ registerSystem("coriolis", {
     },
     {
       "type": "quickstart",
-      "url": "https://freeleaguepublishing.com/wp-content/uploads/2017/02/CORIOLIS_QUICKSTART.pdf",
+      "url": "https://www.drivethrurpg.com/en/product/204702/coriolis-the-third-horizon-quickstart",
       "fmt": "PDF"
     }
   ],

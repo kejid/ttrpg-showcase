@@ -40,8 +40,8 @@ registerSystem("one-ring", {
     },
     {
       "type": "sheet",
-      "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The-Lord-of-the-Rings-Roleplaying-character-sheet.pdf",
-      "fmt": "PDF"
+      "url": "https://freeleaguepublishing.com/wp-content/uploads/2025/09/TOR_Character-Sheets.zip",
+      "fmt": "ZIP"
     }
   ],
   "mechanics": [

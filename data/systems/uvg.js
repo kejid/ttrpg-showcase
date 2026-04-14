@@ -37,7 +37,7 @@ registerSystem("uvg", {
   "resources": [
     {
       "type": "link",
-      "url": "https://wizardthieffighter.itch.io/uvg2e",
+      "url": "https://wizardthieffighter.itch.io/uvg-2e",
       "fmt": "Web"
     },
     {

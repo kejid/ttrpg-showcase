@@ -42,17 +42,17 @@ registerSystem("ironsworn", {
     },
     {
       "type": "rules",
-      "url": "https://drive.google.com/file/d/1bGzbMJanCGTBCBQ5FPcVJdBaL7FJ0Iox/view",
+      "url": "https://shawn-tomkin.itch.io/ironsworn",
       "fmt": "PDF"
     },
     {
       "type": "sheet",
-      "url": "https://drive.google.com/file/d/1ezVMiMtWU0B3Q3CbKXAjJiZDa3m6Cd_A/view",
+      "url": "https://tomkinpress.com/products/ironsworn-playkit",
       "fmt": "PDF"
     },
     {
       "type": "tool",
-      "url": "https://ironsworn.netlify.app/",
+      "url": "https://nboughton.uk/apps/ironsworn-campaign/",
       "fmt": "Web"
     }
   ],
